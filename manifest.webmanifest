@@ -1,12 +1,12 @@
 {
   "name": "The Right Side Up",
   "short_name": "Right Side Up",
-  "description": "A free contemplative library helping people see Jesus more clearly.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#1C3D3D",
   "theme_color": "#1C3D3D",
+  "description": "A digital library helping people see Jesus and his Kingdom more clearly.",
   "icons": [
     {
       "src": "/icons/icon-192.png",
