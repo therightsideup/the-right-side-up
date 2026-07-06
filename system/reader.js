@@ -8,11 +8,11 @@
      3. publications/<slug>.content.js   (defines `pages`)
      4. <script>initReader()</script>    (kicks off rendering) */
 
-function shell(inner,section='TEACH US TO PRAY',topic='LUKE 11'){
-  return `<div class="side"><span>@THE.RIGHTSIDEUP</span><span>${section}</span><span>LUKE 11</span></div>
+function shell(inner,section='TEACH US TO PRAY',topic='LUKE 11',passage='LUKE 11',title='Teach Us To Pray'){
+  return `<div class="side"><span>@THE.RIGHTSIDEUP</span><span>${section}</span><span>${passage}</span></div>
   <div class="meta"><span>${section}</span><span>${topic}</span></div>
   ${inner}
-  <div class="footer"><span>Teach Us To Pray</span><span>@the.rightsideup</span></div>`
+  <div class="footer"><span>${title}</span><span>@the.rightsideup</span></div>`
 }
 
 let i=0;
@@ -32,3 +32,22 @@ document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next(); if(e.key
 function initReader(){
   render();
 }
+
+function buildPrintPages(){
+  let container=document.getElementById('print-pages');
+  if(!container){
+    container=document.createElement('div');
+    container.id='print-pages';
+    document.body.appendChild(container);
+  }
+  container.innerHTML='';
+  pages.forEach(spread=>{
+    spread.forEach(pg=>{
+      const el=document.createElement('section');
+      el.className='page'+(pg.teal?' teal':'');
+      el.innerHTML=pg.html;
+      container.appendChild(el);
+    });
+  });
+}
+window.addEventListener('beforeprint', buildPrintPages);

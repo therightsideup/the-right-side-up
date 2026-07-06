@@ -269,13 +269,17 @@ button:hover{filter:brightness(1.06)}
   .title{font-size:58px}
   .huge{font-size:51px}
   .big{font-size:39px}
+  .circle{width:64px;height:64px;top:26px;right:22px}
+  .engraving.top{top:86px}
 }
+#print-pages{display:none}
 @media print{
   @page{size:7in 10.888in;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{background:white;padding:0;display:block}
   .toolbar{display:none}
-  .stage{display:block;width:auto}
-  .book{width:auto;display:block;aspect-ratio:auto}
-  .page{width:7in;height:10.888in;page-break-after:always;box-shadow:none;margin:0 auto}
-  .right{display:block}
+  .stage{display:none}
+  #print-pages{display:block}
+  #print-pages .page{width:7in;height:10.888in;page-break-after:always;box-shadow:none;margin:0 auto}
+  #print-pages .page:last-child{page-break-after:auto}
 }
