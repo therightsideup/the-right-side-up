@@ -269,7 +269,7 @@ button:hover{filter:brightness(1.06)}
   .title{font-size:58px}
   .huge{font-size:51px}
   .big{font-size:39px}
-  .circle{width:64px;height:64px;top:26px;right:22px}
+  .circle{width:92px;height:92px;top:48px;right:30px}
   .engraving.top{top:86px}
 }
 #print-pages{display:none}
