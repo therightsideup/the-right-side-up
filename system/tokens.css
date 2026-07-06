@@ -1,0 +1,22 @@
+/* The Right Side Up — Design Tokens
+   Single source of truth for color, spacing, and shadow values.
+   Shared by the homepage and every publication. Change a value here,
+   it changes everywhere. */
+
+:root{
+  --teal:#1C3D3D;
+  --cream:#F5F0E8;
+  --ink:#121515;
+  --muted:#716E66;
+  --line:#B9AE9A;
+  --bg:#153B3A;
+  --gold:#B9975B;
+  --sage:#6F7A63;
+  --clay:#A85F42;
+  --stone:#D7CEBD;
+  --rail:32px;
+  --pad-x:56px;
+  --pad-r:38px;
+  --pad-y:38px;
+  --shadow:0 18px 40px rgba(0,0,0,.36);
+}

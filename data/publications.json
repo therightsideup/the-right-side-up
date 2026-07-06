@@ -1,0 +1,27 @@
+[
+  {
+    "number": 1,
+    "title": "Teach Us\nTo Pray",
+    "blurb": "A guide to prayer from Luke 11. A pattern. A posture. A promise.",
+    "status": "live",
+    "href": "/publications/teach-us-to-pray.html"
+  },
+  {
+    "number": 2,
+    "title": "The Good\nNeighbor",
+    "blurb": "Jesus transforms strangers into neighbors.",
+    "status": "coming"
+  },
+  {
+    "number": 3,
+    "title": "Questions\nJesus Asked",
+    "blurb": "A future collection on the questions that reveal the Kingdom.",
+    "status": "coming"
+  },
+  {
+    "number": 4,
+    "title": "The Upside-\nDown Kingdom",
+    "blurb": "The foundational thesis of The Right Side Up.",
+    "status": "coming"
+  }
+]

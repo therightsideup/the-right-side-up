@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#1C3D3D">
 <link rel="icon" href="/icons/icon-192.png">
 <link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/system/tokens.css">
 <style>
-:root{--teal:#1C3D3D;--cream:#F5F0E8;--ink:#121515;--muted:#716E66;--line:#B9AE9A}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Helvetica,Arial,sans-serif}a{color:inherit;text-decoration:none}
 .mark{display:inline-block;width:112px;height:112px;border:1.4px solid currentColor;border-radius:50%;position:relative;margin:0 auto}.mark:before,.mark:after{content:"";position:absolute;width:1.7px;height:42px;background:currentColor;top:34px;left:50%;transform-origin:top center}.mark:before{transform:rotate(42deg)}.mark:after{transform:rotate(-42deg)}.mark.small{width:38px;height:38px;margin:0}.mark.small:before,.mark.small:after{height:15px;top:11px;width:1.2px}
 .top{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,4vw,48px);color:rgba(245,240,232,.72);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:950;pointer-events:none}.top nav{display:flex;gap:22px;pointer-events:auto}.top a{opacity:.78}.top a:hover{opacity:1}
@@ -25,9 +25,24 @@ footer{background:var(--teal);color:rgba(245,240,232,.64);padding:34px clamp(22p
 <main>
 <section class="threshold" id="begin"><div class="threshold-inner"><div class="mark"></div><h1>The<br>Right<br>Side Up</h1><div class="label">A Digital Library</div><div class="sub">Helping people see Jesus and his Kingdom more clearly.</div><a class="begin" href="#welcome">Begin</a></div></section>
 <section class="section welcome" id="welcome"><div><div class="kicker">Welcome</div><h2>Take<br>Your<br>Time.</h2></div><div><p class="serif">This library exists for people who want to slow down long enough to see Jesus and his Kingdom more clearly.</p><div class="rule"></div><p class="copy">Every publication is freely available. No ads. No popups. No paywalls. No urgency. The work is offered as a gift and entrusted to Jesus.</p></div></section>
-<section class="section library" id="library"><div class="kicker">Publications</div><h2>The First<br>Shelf.</h2><p class="copy">The library grows slowly. One careful publication at a time.</p><div class="pub-list"><a class="pub" href="/publications/teach-us-to-pray.html"><div class="pub-num">01</div><div><h3>Teach Us<br>To Pray</h3><p>A guide to prayer from Luke 11. A pattern. A posture. A promise.</p></div><div class="action">Read →</div></a><div class="pub"><div class="pub-num">02</div><div><h3>The Good<br>Neighbor</h3><p>Jesus transforms strangers into neighbors.</p></div><div class="action coming">Coming</div></div><div class="pub"><div class="pub-num">03</div><div><h3>Questions<br>Jesus Asked</h3><p>A future collection on the questions that reveal the Kingdom.</p></div><div class="action coming">Coming</div></div><div class="pub"><div class="pub-num">04</div><div><h3>The Upside-<br>Down Kingdom</h3><p>The foundational thesis of The Right Side Up.</p></div><div class="action coming">Coming</div></div></div></section>
+<section class="section library" id="library"><div class="kicker">Publications</div><h2>The First<br>Shelf.</h2><p class="copy">The library grows slowly. One careful publication at a time.</p><div class="pub-list" id="pub-list"></div></section>
 <section class="section about" id="about"><div class="kicker">About the Studio</div><h2>A Body<br>Of Work.</h2><p class="serif">We hope to build a body of work that forms a Body at work.</p><div class="rule"></div><p class="copy">The Right Side Up exists to create beautiful, generous, theologically faithful publications that help people see Jesus and his Kingdom more clearly, and live as Kingdom people in the world.</p><div class="commitments"><div class="commitment"><b>01</b><h3>Kingdom Clarity</h3><p>Clarity on the other side of complexity.</p></div><div class="commitment"><b>02</b><h3>Stewarded Attention</h3><p>Attention is something to care for, never capture.</p></div><div class="commitment"><b>03</b><h3>Formation</h3><p>Formation over information.</p></div><div class="commitment"><b>04</b><h3>Word & Spirit</h3><p>Continually shaped by the Word and the Spirit.</p></div></div></section>
 <section class="section correspondence" id="correspondence"><div><div class="kicker">Correspondence</div><h2>Not A<br>Platform.</h2><p class="copy">The work comes first. But the work is still made by a person, and sometimes people want to write back.</p></div><div class="note"><p class="serif">If something in the library encouraged you, raised a question, or helped you see Jesus more clearly, you are welcome to correspond with the founding editor.</p><p class="copy">Every message is read personally. No list. No funnel. No automatic campaign.</p><a class="email-link" href="mailto:hello@therightsideup.org">Correspond →</a></div></section>
 </main><footer><div>The Right Side Up</div><div>Library → Formation → Community → Vocation</div></footer>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));}</script>
+<script>
+fetch('/data/publications.json').then(r=>r.json()).then(pubs=>{
+  const list = document.getElementById('pub-list');
+  list.innerHTML = pubs.map(p=>{
+    const num = String(p.number).padStart(2,'0');
+    const title = p.title.split('\n').join('<br>');
+    const isLive = p.status === 'live';
+    const tag = isLive ? 'a' : 'div';
+    const hrefAttr = isLive ? ` href="${p.href}"` : '';
+    const actionClass = isLive ? 'action' : 'action coming';
+    const actionText = isLive ? 'Read \u2192' : 'Coming';
+    return `<${tag} class="pub"${hrefAttr}><div class="pub-num">${num}</div><div><h3>${title}</h3><p>${p.blurb}</p></div><div class="${actionClass}">${actionText}</div></${tag}>`;
+  }).join('');
+});
+</script>
 </body></html>
