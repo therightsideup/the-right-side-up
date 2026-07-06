@@ -1,17 +1,15 @@
-# The Right Side Up
+self.addEventListener('install', event => {
+  self.skipWaiting();
+});
 
-A free contemplative library helping people see Jesus turn an upside-down world right side up.
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.map(key => caches.delete(key)))
+    ).then(() => self.clients.claim())
+  );
+});
 
-No ads. No banners. No paywalls. No hurry.
-
-## Files
-
-- `index.html` — library front door
-- `publications/teach-us-to-pray.html` — first publication
-- `manifest.webmanifest` — PWA metadata
-- `service-worker.js` — offline cache layer
-- `icons/` — install icons
-
-## Deploy
-
-This is a zero-build static site. It can be deployed to Cloudflare Pages, GitHub Pages, or Vercel.
+self.addEventListener('fetch', event => {
+  return;
+});
