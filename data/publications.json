@@ -21,14 +21,15 @@
   },
   {
     "number": 4,
-    "title": "Questions\nJesus Asked",
-    "blurb": "A future collection on the questions that reveal the Kingdom.",
+    "title": "The Upside-\nDown Kingdom",
+    "blurb": "The foundational thesis of The Right Side Up.",
     "status": "coming"
   },
   {
     "number": 5,
-    "title": "The Upside-\nDown Kingdom",
-    "blurb": "The foundational thesis of The Right Side Up.",
-    "status": "coming"
+    "title": "Grant Me\nJustice",
+    "blurb": "A guide to prayer in the wait. Luke 18.",
+    "status": "live",
+    "href": "/publications/grant-me-justice.html"
   }
 ]
