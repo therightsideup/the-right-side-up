@@ -23,5 +23,12 @@
     "title": "The Upside-\nDown Kingdom",
     "blurb": "The foundational thesis of The Right Side Up.",
     "status": "coming"
+  },
+  {
+    "number": 5,
+    "title": "Living\nHope",
+    "blurb": "Meeting the Risen Jesus in grief, doubt, and failure. John 20–21.",
+    "status": "live",
+    "href": "/publications/living-hope.html"
   }
 ]
