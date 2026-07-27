@@ -3,6 +3,9 @@
     "number": 1,
     "title": "Teach Us\nTo Pray",
     "blurb": "A guide to prayer from Luke 11. A pattern. A posture. A promise.",
+    "theme": "Prayer",
+    "scripture": "Luke 11",
+    "featured": true,
     "status": "live",
     "href": "/publications/teach-us-to-pray.html"
   },
@@ -10,6 +13,9 @@
     "number": 2,
     "title": "Living\nHope",
     "blurb": "Meeting the Risen Jesus in grief, doubt, and failure. John 20–21.",
+    "theme": "Resurrection",
+    "scripture": "John 20–21",
+    "featured": true,
     "status": "live",
     "href": "/publications/living-hope.html"
   },
@@ -17,6 +23,9 @@
     "number": 3,
     "title": "Grant Me\nJustice",
     "blurb": "A guide to prayer in the wait. Luke 18.",
+    "theme": "Prayer & Justice",
+    "scripture": "Luke 18",
+    "featured": true,
     "status": "live",
     "href": "/publications/grant-me-justice.html"
   },
@@ -24,12 +33,18 @@
     "number": 4,
     "title": "The Good\nNeighbor",
     "blurb": "Jesus transforms strangers into neighbors.",
+    "theme": "Neighbor-Love",
+    "scripture": "Luke 10",
+    "featured": false,
     "status": "coming"
   },
   {
     "number": 5,
     "title": "The Upside-\nDown Kingdom",
     "blurb": "The foundational thesis of The Right Side Up.",
+    "theme": "The Kingdom of God",
+    "scripture": "",
+    "featured": false,
     "status": "coming"
   }
 ]
