@@ -1,48 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Right Side Up</title>
-<meta name="description" content="A digital library helping people see Jesus and his Kingdom more clearly.">
-<meta name="theme-color" content="#1C3D3D">
-<link rel="icon" href="/icons/icon-192.png">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/system/tokens.css?v=2">
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Helvetica,Arial,sans-serif}a{color:inherit;text-decoration:none}
-.mark{display:inline-block;width:112px;height:112px;border:1.4px solid currentColor;border-radius:50%;position:relative;margin:0 auto}.mark:before,.mark:after{content:"";position:absolute;width:1.7px;height:42px;background:currentColor;top:34px;left:50%;transform-origin:top center}.mark:before{transform:rotate(42deg)}.mark:after{transform:rotate(-42deg)}.mark.small{width:38px;height:38px;margin:0}.mark.small:before,.mark.small:after{height:15px;top:11px;width:1.2px}
-.top{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,4vw,48px);color:rgba(245,240,232,.72);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:950;pointer-events:none}.top nav{display:flex;gap:22px;pointer-events:auto}.top a{opacity:.78}.top a:hover{opacity:1}
-.threshold{min-height:100svh;background:radial-gradient(circle at 50% 40%,rgba(245,240,232,.09),transparent 25%),linear-gradient(145deg,#0e2f2e 0%,#1C3D3D 55%,#102f2f 100%);color:var(--cream);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative}.threshold:before{content:"";position:absolute;inset:24px;border:1px solid rgba(245,240,232,.16)}.threshold-inner{position:relative;z-index:1;width:min(900px,100%)}.threshold h1{margin:46px 0 0;font-size:clamp(62px,12vw,156px);line-height:.78;letter-spacing:-.105em;text-transform:uppercase;font-weight:950}.label{margin-top:36px;font-size:11px;letter-spacing:.21em;text-transform:uppercase;font-weight:950;color:rgba(245,240,232,.7)}.sub{margin:18px auto 0;max-width:560px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,2.7vw,34px);line-height:1.2}.begin{display:inline-flex;margin-top:54px;border:1px solid rgba(245,240,232,.82);border-radius:999px;padding:14px 25px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:950;transition:.35s ease}.begin:hover{background:var(--cream);color:var(--teal);transform:translateY(-2px)}
-.section{padding:110px clamp(22px,6vw,92px)}.welcome{min-height:80svh;display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}.kicker{font-size:10px;letter-spacing:.19em;text-transform:uppercase;font-weight:950;color:var(--muted)}h2{margin:18px 0 30px;font-size:clamp(48px,7vw,94px);line-height:.82;letter-spacing:-.085em;text-transform:uppercase}.serif{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,3vw,38px);line-height:1.18;color:var(--teal)}.copy{max-width:610px;font-size:15px;line-height:1.65;color:var(--muted)}.rule{height:1px;background:var(--line);margin:28px 0}
-.library{background:#eee4d2}.pub-list{max-width:980px;margin:55px auto 0;border-top:1px solid var(--line)}.pub{display:grid;grid-template-columns:92px 1fr 150px;gap:26px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}.pub-num{font-size:42px;line-height:1;letter-spacing:-.065em;font-weight:950;color:var(--teal)}.pub h3{margin:0;font-size:clamp(34px,4vw,58px);line-height:.84;letter-spacing:-.075em;text-transform:uppercase}.pub p{margin:10px 0 0;max-width:520px;color:var(--muted);font-size:13.5px;line-height:1.45}.action{justify-self:end;border:1px solid var(--teal);color:var(--teal);border-radius:999px;padding:11px 16px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:950}.coming{border-color:var(--line);color:var(--muted)}.library-door{max-width:980px;margin:46px auto 0;display:flex;align-items:center;justify-content:space-between;gap:28px}.library-door p{margin:0;max-width:550px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:var(--teal)}.library-link{flex:0 0 auto;border-bottom:1px solid var(--teal);padding:0 0 7px;font-size:10px;letter-spacing:.17em;text-transform:uppercase;font-weight:950}
-.about{background:var(--teal);color:var(--cream)}.about .kicker{color:rgba(245,240,232,.62)}.about h2,.about .serif{color:var(--cream)}.about .copy{color:rgba(245,240,232,.72)}.commitments{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:58px}.commitment{border-top:1px solid rgba(245,240,232,.28);padding-top:18px}.commitment b{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,240,232,.58);margin-bottom:16px}.commitment h3{margin:0 0 12px;font-size:22px;line-height:.95;letter-spacing:-.045em;text-transform:uppercase}.commitment p{margin:0;color:rgba(245,240,232,.72);font-size:12.5px;line-height:1.45}
-.correspondence{background:var(--cream);min-height:70svh;display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.note{border:1px solid var(--line);padding:28px}.note p{margin:0 0 18px}.email-link{display:inline-flex;margin-top:12px;border:1px solid var(--teal);color:var(--teal);border-radius:999px;padding:12px 18px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:950}
-footer{background:var(--teal);color:rgba(245,240,232,.64);padding:34px clamp(22px,6vw,92px);display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:950}
-@media(max-width:1020px){.welcome,.correspondence{grid-template-columns:1fr}.commitments{grid-template-columns:1fr 1fr}}@media(max-width:680px){.top{position:absolute}.top nav{display:none}.threshold:before{inset:14px}.section{padding:78px 20px}.pub{grid-template-columns:1fr;gap:12px}.action{justify-self:start}.library-door{align-items:flex-start;flex-direction:column}.commitments{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183f3e">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Beautiful, generous publications helping people see Jesus and his Kingdom more clearly.">
+  <title>The Right Side Up</title>
+  <link rel="icon" href="/icons/rsu-mark.svg?v=1" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/system/home.css?v=10">
+</head>
 <body>
-<header class="top"><a href="#begin" aria-label="The Right Side Up"><span class="mark small"></span></a><nav><a href="/library.html">Library</a><a href="#about">About</a><a href="#correspondence">Correspondence</a></nav></header>
-<main>
-<section class="threshold" id="begin"><div class="threshold-inner"><div class="mark"></div><h1>The<br>Right<br>Side Up</h1><div class="label">A Digital Library</div><div class="sub">Helping people see Jesus and his Kingdom more clearly.</div><a class="begin" href="#welcome">Begin</a></div></section>
-<section class="section welcome" id="welcome"><div><div class="kicker">Welcome</div><h2>Take<br>Your<br>Time.</h2></div><div><p class="serif">This library exists for people who want to slow down long enough to see Jesus and his Kingdom more clearly.</p><div class="rule"></div><p class="copy">Every publication is freely available. No ads. No popups. No paywalls. No urgency. The work is offered as a gift and entrusted to Jesus.</p></div></section>
-<section class="section library" id="library"><div class="kicker">Featured Publications</div><h2>The First<br>Shelf.</h2><p class="copy">A place to begin. These publications offer an introduction to the work of the Studio.</p><div class="pub-list" id="pub-list"></div><div class="library-door"><p>There is more to explore beyond the first shelf.</p><a class="library-link" href="/library.html">Enter the complete library →</a></div></section>
-<section class="section about" id="about"><div class="kicker">About the Studio</div><h2>A Body<br>Of Work.</h2><p class="serif">We hope to build a body of work that forms a Body at work.</p><div class="rule"></div><p class="copy">The Right Side Up exists to create beautiful, generous, theologically faithful publications that help people see Jesus and his Kingdom more clearly, and live as Kingdom people in the world.</p><div class="commitments"><div class="commitment"><b>01</b><h3>Kingdom Clarity</h3><p>Clarity on the other side of complexity.</p></div><div class="commitment"><b>02</b><h3>Stewarded Attention</h3><p>Attention is something to care for, never capture.</p></div><div class="commitment"><b>03</b><h3>Formation</h3><p>Formation over information.</p></div><div class="commitment"><b>04</b><h3>Word & Spirit</h3><p>Continually shaped by the Word and the Spirit.</p></div></div></section>
-<section class="section correspondence" id="correspondence"><div><div class="kicker">Correspondence</div><h2>Not A<br>Platform.</h2><p class="copy">The work comes first. But the work is still made by a person, and sometimes people want to write back.</p></div><div class="note"><p class="serif">If something in the library encouraged you, raised a question, or helped you see Jesus more clearly, you are welcome to correspond with the founding editor.</p><p class="copy">Every message is read personally. No list. No funnel. No automatic campaign.</p><a class="email-link" href="mailto:hello@therightsideup.org">Correspond →</a></div></section>
-</main><footer><div>The Right Side Up</div><div>Library → Formation → Community → Vocation</div></footer>
-<script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));}</script>
-<script>
-fetch('/data/publications.json').then(r=>r.json()).then(pubs=>{
-  const list = document.getElementById('pub-list');
-  list.innerHTML = pubs.filter(p=>p.status === 'live' && p.featured).map(p=>{
-    const num = String(p.number).padStart(2,'0');
-    const title = p.title.split('\n').join('<br>');
-    const isLive = p.status === 'live';
-    const tag = isLive ? 'a' : 'div';
-    const hrefAttr = isLive ? ` href="${p.href}"` : '';
-    const actionClass = isLive ? 'action' : 'action coming';
-    const actionText = isLive ? 'Read \u2192' : 'Coming';
-    return `<${tag} class="pub"${hrefAttr}><div class="pub-num">${num}</div><div><h3>${title}</h3><p>${p.blurb}</p></div><div class="${actionClass}">${actionText}</div></${tag}>`;
-  }).join('');
-});
-</script>
-</body></html>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="The Right Side Up home">
+      <span class="monogram">RSU</span>
+      <span>The Right Side Up</span>
+    </a>
+    <div class="header-actions">
+      <nav aria-label="Main navigation">
+        <a href="#publications">Publications</a>
+        <a href="#studio">Studio</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Use dark colors" aria-pressed="false" title="Adjust dark and light colors">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-art">
+        <img src="/assets/home/sermon-on-the-mount-field-journal.png" alt="Jesus teaches a closely gathered multitude on a spare sunlit hillside.">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">A digital publishing studio</p>
+        <h1>The<br>Right<br>Side Up</h1>
+        <p class="mission">Helping people see Jesus and his Kingdom more clearly.</p>
+        <a class="text-link" href="#publications">Enter the first publication <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="intro">
+      <p class="eyebrow">Welcome</p>
+      <div>
+        <h2>Come and see.</h2>
+        <p>Each publication begins with Scripture and follows the questions it opens. Read straight through or linger in one movement. There is no right pace—only an invitation to pay attention to Jesus.</p>
+      </div>
+    </section>
+
+    <section class="publications" id="publications">
+      <div class="section-heading">
+        <p class="eyebrow">The first shelf</p>
+        <h2>Begin here.</h2>
+      </div>
+
+      <article class="featured">
+        <a class="featured-art" href="/publications/living-hope.html" aria-label="Read Living Hope">
+          <img src="/assets/living-hope/cover-resurrection-balanced.png" alt="">
+        </a>
+        <div class="featured-copy">
+          <p class="publication-meta">Publication 01 · John 20–21</p>
+          <h3>Living<br>Hope</h3>
+          <p class="featured-dek">Meeting the risen Jesus in grief, doubt, and failure.</p>
+          <p>Four movements through the world, the garden, the locked room, and the shore—and the living hope that meets us there.</p>
+          <a class="read-button" href="/publications/living-hope.html">Read Living Hope <span>→</span></a>
+        </div>
+      </article>
+
+      <div class="forthcoming" aria-labelledby="forthcoming-title">
+        <div class="forthcoming-heading">
+          <p class="eyebrow">In the studio</p>
+          <h2 id="forthcoming-title">Coming soon.</h2>
+        </div>
+        <article class="coming-row">
+          <p class="publication-meta">Publication 02 · Luke 11</p>
+          <h3>Teach Us to Pray</h3>
+          <span>Coming soon</span>
+        </article>
+        <article class="coming-row">
+          <p class="publication-meta">Publication 03 · Luke 18</p>
+          <h3>Grant Me Justice</h3>
+          <span>Coming soon</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio" id="studio">
+      <div class="studio-heading">
+        <p class="eyebrow">What this is</p>
+        <h2>A growing library about Jesus and the life of his Kingdom.</h2>
+      </div>
+      <div class="studio-body">
+        <p class="studio-intro">The Right Side Up is a digital publishing studio. We turn sermons, studies, and long-form teaching into beautiful, theologically grounded publications made to be read slowly, revisited, and shared.</p>
+        <div class="studio-principles">
+          <article>
+            <span>01</span>
+            <h3>Begin with Jesus</h3>
+            <p>Each publication begins with Scripture and helps us see Jesus, his way, and the world he is making new.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Make room to notice</h3>
+            <p>The writing and design are intentionally spacious—inviting attention to become contemplation, and contemplation to become formation.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Offer it as a gift</h3>
+            <p>No ads, popups, paywalls, or manufactured urgency. Everything here is made to be freely read and generously shared.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>The Right Side Up</p>
+    <p>Jesus turns an already upside-down world right side up.</p>
+    <a href="mailto:hello@therightsideup.org">Correspond</a>
+  </footer>
+  <script src="/system/home.js?v=3"></script>
+</body>
+</html>

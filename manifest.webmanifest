@@ -9,6 +9,12 @@
   "description": "A digital library helping people see Jesus and his Kingdom more clearly.",
   "icons": [
     {
+      "src": "/icons/rsu-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
       "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"

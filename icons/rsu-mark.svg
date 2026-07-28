@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">The Right Side Up RSU mark</title>
+  <rect width="512" height="512" rx="76" fill="#183f3e"/>
+  <rect x="62" y="62" width="388" height="388" fill="none" stroke="#f5f0e8" stroke-width="18"/>
+  <text
+    x="256"
+    y="286"
+    fill="#f5f0e8"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="112"
+    font-weight="800"
+    letter-spacing="18"
+    text-anchor="middle"
+  >RSU</text>
+</svg>
