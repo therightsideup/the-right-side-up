@@ -7,7 +7,21 @@
 .wedding-threshold{height:clamp(340px,100vw,520px);background:var(--cream)}
 .wedding-threshold img{height:100%;aspect-ratio:auto;object-fit:cover;object-position:center bottom}
 
-#cry .chapter-card{margin-top:96px}
+.cry-threshold{
+  width:min(100%,880px);
+  height:clamp(440px,76svh,720px);
+  margin:0 auto;
+  overflow:hidden;
+  background:var(--cream);
+}
+.cry-threshold img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center bottom;
+}
+#cry .chapter-card{margin-top:-84px}
 
 .word-study{
   margin:72px 0 0;
@@ -45,15 +59,18 @@ body.evening .word-study .greek{color:#f3e9db}
 .history-note>p:not(.eyebrow){font-size:18px;line-height:1.58}
 .response-threshold h2{max-width:10ch}
 .advocate-threshold{
-  width:min(100%,760px);
+  width:min(100%,920px);
+  height:clamp(360px,56svh,560px);
   margin:0 auto;
+  overflow:hidden;
   background:var(--cream);
 }
 .advocate-threshold img{
   display:block;
   width:100%;
-  height:auto;
-  object-fit:contain;
+  height:100%;
+  object-fit:cover;
+  object-position:center bottom;
 }
 .four-steps{grid-template-columns:1fr}
 
