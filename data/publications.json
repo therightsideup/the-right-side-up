@@ -7,17 +7,21 @@
     "scripture": "John 20–21",
     "featured": true,
     "status": "live",
-    "href": "/publications/living-hope.html"
+    "href": "/publications/living-hope.html",
+    "cover": "/assets/living-hope/cover-resurrection-balanced.png",
+    "coverAlt": "An open tomb cut into a hillside, rendered in spare teal and cream lines."
   },
   {
     "number": 2,
     "title": "Teach Us\nTo Pray",
-    "blurb": "A guide to prayer from Luke 11. A pattern. A posture. A promise.",
+    "blurb": "Learning to pray with trust, persistence, and the goodness of the Father.",
     "theme": "Prayer",
     "scripture": "Luke 11",
     "featured": true,
-    "status": "coming",
-    "href": "/publications/teach-us-to-pray.html"
+    "status": "live",
+    "href": "/publications/teach-us-to-pray.html",
+    "cover": "/assets/teach-us-to-pray/road-teaching-approved.png",
+    "coverAlt": "Jesus teaches women and men beside a traveled road through ancient Judea."
   },
   {
     "number": 3,
@@ -27,24 +31,8 @@
     "scripture": "Luke 18",
     "featured": true,
     "status": "coming",
-    "href": "/publications/grant-me-justice.html"
-  },
-  {
-    "number": 4,
-    "title": "The Good\nNeighbor",
-    "blurb": "Jesus transforms strangers into neighbors.",
-    "theme": "Neighbor-Love",
-    "scripture": "Luke 10",
-    "featured": false,
-    "status": "coming"
-  },
-  {
-    "number": 5,
-    "title": "The Upside-\nDown Kingdom",
-    "blurb": "The foundational thesis of The Right Side Up.",
-    "theme": "The Kingdom of God",
-    "scripture": "",
-    "featured": false,
-    "status": "coming"
+    "href": "/publications/grant-me-justice.html",
+    "cover": null,
+    "coverAlt": ""
   }
 ]
