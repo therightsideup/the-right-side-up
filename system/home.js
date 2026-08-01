@@ -1,4 +1,13 @@
 (function(){
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+
+  function beginAtTop(){
+    if(!window.location.hash) window.scrollTo(0,0);
+  }
+
+  beginAtTop();
+  window.addEventListener('pageshow',beginAtTop);
+
   const themeButton=document.querySelector('.theme-toggle');
   const themeMeta=document.querySelector('meta[name="theme-color"]');
   const savedTheme=localStorage.getItem('rsu-theme');

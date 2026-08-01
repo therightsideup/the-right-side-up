@@ -1,0 +1,85 @@
+@import url('/system/teach-us-to-pray.css?v=6');
+
+.cover-art img{object-position:50% 72%}
+.cover .dek{max-width:20rem}
+.orientation{grid-template-columns:repeat(4,1fr)}
+
+.wedding-threshold{height:clamp(340px,100vw,520px);background:var(--cream)}
+.wedding-threshold img{height:100%;aspect-ratio:auto;object-fit:cover;object-position:center bottom}
+
+#cry .chapter-card{margin-top:96px}
+
+.word-study{
+  margin:72px 0 0;
+  padding:30px 26px 12px;
+  border-top:3px solid var(--teal-soft);
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.word-study .eyebrow{margin-bottom:22px}
+.word-study .greek{
+  margin:0;
+  color:var(--teal);
+  font-family:var(--serif);
+  font-size:clamp(48px,13vw,78px);
+  line-height:1;
+}
+.word-study .transliteration{
+  margin:14px 0 28px;
+  color:var(--walnut);
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+body.evening .word-study .greek{color:#f3e9db}
+
+.defender-threshold h2{max-width:10ch}
+.history-note{
+  margin:72px 0 0;
+  padding:30px 0 8px;
+  border-top:3px solid var(--clay);
+  border-bottom:1px solid var(--line);
+}
+.history-note>p:not(.eyebrow){font-size:18px;line-height:1.58}
+.response-threshold h2{max-width:10ch}
+.advocate-threshold{
+  width:min(100%,760px);
+  margin:0 auto;
+  background:var(--cream);
+}
+.advocate-threshold img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.four-steps{grid-template-columns:1fr}
+
+@media(min-width:820px){
+  .cover h1{font-size:clamp(72px,8.2vw,132px)}
+  .wedding-threshold{width:min(100%,820px);height:min(74svh,620px)}
+  .four-steps{grid-template-columns:repeat(2,1fr)}
+
+  body[data-cover="full-art"] .cover{grid-template-columns:minmax(0,1.1fr) minmax(420px,.9fr)}
+  body[data-cover="full-art"] .cover-art{display:grid;place-items:center;background:var(--paper)}
+  body[data-cover="full-art"] .cover-art img{
+    width:100%;
+    height:100svh;
+    object-fit:contain;
+    object-position:center;
+  }
+
+  body[data-cover="art-forward"] .cover{grid-template-columns:minmax(0,1.42fr) minmax(350px,.58fr)}
+  body[data-cover="art-forward"] .cover-copy{padding-inline:38px}
+  body[data-cover="art-forward"] .cover h1{font-size:clamp(58px,6vw,88px)}
+  body[data-cover="art-forward"] .cover-art img{object-position:50% 72%}
+}
+
+@media(max-width:520px){
+  .orientation{grid-template-columns:1fr 1fr}
+  .orientation span:nth-child(3){border-left:0;border-top:1px solid var(--line)}
+  .orientation span:nth-child(4){border-top:1px solid var(--line)}
+  .cover h1{font-size:clamp(58px,18vw,90px)}
+}

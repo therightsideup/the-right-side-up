@@ -30,9 +30,9 @@
     "theme": "Prayer & Justice",
     "scripture": "Luke 18",
     "featured": true,
-    "status": "coming",
+    "status": "live",
     "href": "/publications/grant-me-justice.html",
-    "cover": null,
-    "coverAlt": ""
+    "cover": "/assets/grant-me-justice/widow-before-judge.png",
+    "coverAlt": "A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment."
   }
 ]
