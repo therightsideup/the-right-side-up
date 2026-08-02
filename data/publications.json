@@ -2,9 +2,9 @@
   "shelves": [
     {
       "id": "lukes-parables",
-      "eyebrow": "Collection 01 · Luke",
-      "title": "Luke’s Parables of Jesus",
-      "description": "Two teachings of Jesus about prayer, persistence, justice, and the character of God.",
+      "eyebrow": "Collection 01 · The parables of Jesus",
+      "title": "Stories of the Kingdom",
+      "description": "Prayer, justice, and the character of God in the stories Jesus told.",
       "note": "2 publications"
     },
     {
@@ -41,7 +41,7 @@
       "title": "Teach Us\nTo Pray",
       "blurb": "Learning to pray with trust, persistence, and the goodness of the Father.",
       "scripture": "Luke 11",
-      "coverLabel": "Luke’s Parables · 01 · Luke 11",
+      "coverLabel": "Stories of the Kingdom · 01 · Luke 11",
       "status": "live",
       "href": "/publications/teach-us-to-pray.html",
       "cover": "/assets/teach-us-to-pray/road-teaching-approved.png",
@@ -53,7 +53,7 @@
       "title": "Grant Me\nJustice",
       "blurb": "A guide to prayer, persistence, and justice in the wait.",
       "scripture": "Luke 18",
-      "coverLabel": "Luke’s Parables · 02 · Luke 18",
+      "coverLabel": "Stories of the Kingdom · 02 · Luke 18",
       "status": "live",
       "href": "/publications/grant-me-justice.html",
       "cover": "/assets/grant-me-justice/widow-before-judge.png",
