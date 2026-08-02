@@ -47,7 +47,8 @@
   function shelfMarkup(shelf,publications){
     const shelfPublications=publications.filter(publication=>publication.shelf===shelf.id);
     const cards=shelfPublications.map(cardMarkup).join('');
-    return `<section class="collection-group" aria-labelledby="${shelf.id}-title">
+    const featured=shelf.id==='living-hope';
+    return `<section class="collection-group ${featured?'featured-collection':''}" aria-labelledby="${shelf.id}-title">
       <header class="collection-heading">
         <div>
           <p class="eyebrow">${shelf.eyebrow}</p>

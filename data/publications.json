@@ -1,18 +1,18 @@
 {
   "shelves": [
     {
+      "id": "living-hope",
+      "eyebrow": "Featured publication",
+      "title": "Living Hope",
+      "description": "Three encounters with the risen Jesus in grief, doubt, and failure.",
+      "note": "John 20–21"
+    },
+    {
       "id": "lukes-parables",
       "eyebrow": "Collection 01 · The parables of Jesus",
       "title": "Stories of the Kingdom",
       "description": "Prayer, justice, and the character of God in the stories Jesus told.",
       "note": "2 publications"
-    },
-    {
-      "id": "living-hope",
-      "eyebrow": "Standalone publication",
-      "title": "Living Hope",
-      "description": "Three encounters with the risen Jesus in grief, doubt, and failure.",
-      "note": "John 20–21"
     },
     {
       "id": "life-together",

@@ -109,6 +109,16 @@ img{display:block;width:100%}
 .collection-introduction p{margin:0;color:var(--muted);font-family:var(--serif);font-size:clamp(18px,4.8vw,25px);line-height:1.4}
 .collection-introduction span{display:inline-block;margin-top:18px;color:var(--teal-soft);font-size:8px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
 .collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(145px,100%),1fr));gap:40px 14px;align-items:start}
+.featured-collection{
+  padding:34px 22px 44px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb,var(--card) 82%,var(--canvas));
+  box-shadow:0 24px 60px rgba(54,39,30,.08);
+}
+.featured-collection .collection-heading{margin-bottom:38px}
+.featured-collection .collection-heading .eyebrow{color:var(--clay)}
+.featured-collection .collection-grid.single{grid-template-columns:minmax(0,360px)}
+.featured-collection .publication-cover{box-shadow:0 26px 46px rgba(54,39,30,.16)}
 .publication-card{min-width:0}
 .publication-card-link{display:block;text-decoration:none}
 .publication-cover{
@@ -167,6 +177,7 @@ footer a{width:max-content;padding-bottom:4px;border-bottom:1px solid var(--mute
 body.evening .publication-cover{box-shadow:0 20px 36px rgba(0,0,0,.22)}
 body.evening .publication-card-link:hover .publication-cover{box-shadow:0 28px 48px rgba(0,0,0,.3)}
 body.evening .publication-card.pending .cover-art{background:#102b2a}
+body.evening .featured-collection{background:color-mix(in srgb,var(--card) 90%,#102b2a);box-shadow:0 24px 60px rgba(0,0,0,.18)}
 
 @media(min-width:720px){
   .site-header{top:14px;left:14px;right:14px;padding-inline:22px}
@@ -178,6 +189,10 @@ body.evening .publication-card.pending .cover-art{background:#102b2a}
   .collection-heading{grid-template-columns:1.05fr .95fr;align-items:end;gap:8vw;margin-bottom:58px}
   .collection-heading h3{font-size:clamp(54px,6.4vw,88px)}
   .collection-grid{grid-template-columns:repeat(auto-fit,minmax(240px,310px));gap:72px 34px;justify-content:start}
+  .featured-collection{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);align-items:end;gap:8vw;padding:64px 6vw 68px}
+  .featured-collection .collection-heading{grid-template-columns:1fr;align-self:center;gap:28px;margin:0}
+  .featured-collection .collection-heading h3{font-size:clamp(68px,7vw,104px)}
+  .featured-collection .collection-grid.single{grid-template-columns:minmax(280px,390px);justify-content:end}
   .cover-art{height:69%}
   .cover-title{height:31%}
   .cover-title{padding:22px 20px 18px}
@@ -194,7 +209,6 @@ body.evening .publication-card.pending .cover-art{background:#102b2a}
   .wordmark>span:last-child{display:none}
   .header-actions{gap:12px}
   .site-header nav{gap:14px}
-  .site-header nav a:last-child{display:none}
 }
 @media(max-width:340px){.collection-grid{grid-template-columns:1fr}.cover-title h3{font-size:34px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-cover{transition:none}}
