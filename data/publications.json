@@ -1,38 +1,87 @@
-[
-  {
-    "number": 1,
-    "title": "Living\nHope",
-    "blurb": "Meeting the Risen Jesus in grief, doubt, and failure. John 20–21.",
-    "theme": "Resurrection",
-    "scripture": "John 20–21",
-    "featured": true,
-    "status": "live",
-    "href": "/publications/living-hope.html",
-    "cover": "/assets/living-hope/cover-resurrection-balanced.png",
-    "coverAlt": "An open tomb cut into a hillside, rendered in spare teal and cream lines."
-  },
-  {
-    "number": 2,
-    "title": "Teach Us\nTo Pray",
-    "blurb": "Learning to pray with trust, persistence, and the goodness of the Father.",
-    "theme": "Prayer",
-    "scripture": "Luke 11",
-    "featured": true,
-    "status": "live",
-    "href": "/publications/teach-us-to-pray.html",
-    "cover": "/assets/teach-us-to-pray/road-teaching-approved.png",
-    "coverAlt": "Jesus teaches women and men beside a traveled road through ancient Judea."
-  },
-  {
-    "number": 3,
-    "title": "Grant Me\nJustice",
-    "blurb": "A guide to prayer in the wait. Luke 18.",
-    "theme": "Prayer & Justice",
-    "scripture": "Luke 18",
-    "featured": true,
-    "status": "live",
-    "href": "/publications/grant-me-justice.html",
-    "cover": "/assets/grant-me-justice/widow-before-judge.png",
-    "coverAlt": "A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment."
-  }
-]
+{
+  "shelves": [
+    {
+      "id": "lukes-parables",
+      "eyebrow": "Collection 01 · Luke",
+      "title": "Luke’s Parables of Jesus",
+      "description": "Two teachings of Jesus about prayer, persistence, justice, and the character of God.",
+      "note": "2 publications"
+    },
+    {
+      "id": "living-hope",
+      "eyebrow": "Standalone publication",
+      "title": "Living Hope",
+      "description": "Three encounters with the risen Jesus in grief, doubt, and failure.",
+      "note": "John 20–21"
+    },
+    {
+      "id": "life-together",
+      "eyebrow": "Collection 02 · Formation",
+      "title": "Life Together",
+      "description": "How the life of Jesus takes shape in the space between us.",
+      "note": "A growing collection"
+    }
+  ],
+  "publications": [
+    {
+      "shelf": "living-hope",
+      "seriesNumber": null,
+      "title": "Living\nHope",
+      "blurb": "Meeting the risen Jesus in grief, doubt, and failure.",
+      "scripture": "John 20–21",
+      "coverLabel": "Standalone · John 20–21",
+      "status": "live",
+      "href": "/publications/living-hope.html",
+      "cover": "/assets/living-hope/cover-resurrection-balanced.png",
+      "coverAlt": "An open tomb cut into a hillside, rendered in spare teal and cream lines."
+    },
+    {
+      "shelf": "lukes-parables",
+      "seriesNumber": 1,
+      "title": "Teach Us\nTo Pray",
+      "blurb": "Learning to pray with trust, persistence, and the goodness of the Father.",
+      "scripture": "Luke 11",
+      "coverLabel": "Luke’s Parables · 01 · Luke 11",
+      "status": "live",
+      "href": "/publications/teach-us-to-pray.html",
+      "cover": "/assets/teach-us-to-pray/road-teaching-approved.png",
+      "coverAlt": "Jesus teaches women and men beside a traveled road through ancient Judea."
+    },
+    {
+      "shelf": "lukes-parables",
+      "seriesNumber": 2,
+      "title": "Grant Me\nJustice",
+      "blurb": "A guide to prayer, persistence, and justice in the wait.",
+      "scripture": "Luke 18",
+      "coverLabel": "Luke’s Parables · 02 · Luke 18",
+      "status": "live",
+      "href": "/publications/grant-me-justice.html",
+      "cover": "/assets/grant-me-justice/widow-before-judge.png",
+      "coverAlt": "A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment."
+    },
+    {
+      "shelf": "life-together",
+      "seriesNumber": 1,
+      "title": "The Space\nBetween Us",
+      "blurb": "Every relationship has a gap. What we do there reveals our faith.",
+      "scripture": "James 1:19–27",
+      "coverLabel": "Life Together · 01 · James 1:19–27",
+      "status": "preview",
+      "href": "/publications/the-space-between-us.html?preview=4",
+      "cover": "/assets/the-space-between-us/01-gap-we-feel-home.png",
+      "coverAlt": "Two people stand at opposite ends of a first-century Judean home, rendered in spare teal and cream lines."
+    },
+    {
+      "shelf": "life-together",
+      "seriesNumber": 2,
+      "title": "The Work\nof Repair",
+      "blurb": "Forgiveness makes healing possible. Repair requires participation.",
+      "scripture": "Colossians 3:5–14",
+      "coverLabel": "Life Together · 02 · Colossians 3",
+      "status": "live",
+      "href": "/publications/the-work-of-repair.html",
+      "cover": "/assets/the-work-of-repair/01-damage-between-us.png",
+      "coverAlt": "Two people sit far apart in a first-century Judean home with a torn cloth stretched between them."
+    }
+  ]
+}

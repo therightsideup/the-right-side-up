@@ -1,0 +1,59 @@
+@import url('/system/living-hope-warm.css?v=4');
+
+.cover{grid-template-rows:auto auto}
+.cover-art{background:var(--paper)}
+.cover-art img{object-position:center bottom}
+.cover-copy{display:flex;flex-direction:column;justify-content:flex-end}
+.cover-copy::before{position:static;flex:0 0 auto;margin:0 0 26px}
+.cover h1{font-size:clamp(55px,15vw,98px)}
+.cover .dek{max-width:19rem}
+.orientation{grid-template-columns:repeat(3,1fr)}
+
+.first-movement{
+  padding-top:110px;
+  border-top:1px solid var(--line);
+  background:linear-gradient(to bottom,color-mix(in srgb,var(--clay) 7%,var(--canvas)),var(--canvas) 28rem);
+}
+.first-movement .chapter-card{margin:0 auto}
+
+.threshold{
+  width:min(100%,900px);
+  height:clamp(440px,74svh,680px);
+  margin:0 auto;
+  padding:0;
+  overflow:hidden;
+  background:color-mix(in srgb,var(--teal) 6%,var(--paper));
+}
+.threshold img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:center bottom}
+.chapter-card h2{font-size:clamp(49px,14vw,84px)}
+.chapter-card .question{max-width:31rem}
+.boundary-note{margin-top:46px!important;padding:24px 0 0;border-top:1px solid var(--line);color:var(--muted);font-style:italic}
+.boundary-note strong{color:var(--ink);font-style:normal}
+.big-idea h2{max-width:11ch}
+.big-idea p:last-child{max-width:20ch}
+.closing h2{max-width:12ch}
+.blessing .final-word{max-width:22ch}
+
+@media(min-width:820px){
+  .cover{grid-template-columns:minmax(0,1.12fr) minmax(430px,.88fr);grid-template-rows:1fr}
+  .cover-art{display:grid;place-items:center;min-height:100svh}
+  .cover-art img{height:100svh;object-fit:cover;object-position:center bottom}
+  .cover-copy{padding-inline:52px}
+  .cover h1{font-size:clamp(64px,6vw,102px)}
+  .threshold{width:min(100% - 80px,900px);height:clamp(460px,72svh,680px)}
+  .first-movement{padding-top:140px}
+}
+
+@media(max-width:520px){
+  .reader-bar nav{gap:13px}
+  .reader-bar nav a{font-size:8px;letter-spacing:.07em}
+  .cover-art{height:56svh;min-height:0}
+  .cover-art img{height:100%;object-fit:cover;object-position:center bottom}
+  .cover-copy{padding:31px 24px 38px}
+  .cover h1{font-size:clamp(49px,14.5vw,64px);line-height:.82}
+  .cover .dek{margin:20px 0 25px;font-size:19px}
+  .orientation{grid-template-columns:1fr}
+  .orientation span+span{border-left:0;border-top:1px solid var(--line)}
+  .threshold{width:100%;height:clamp(460px,78svh,620px);background:var(--paper)}
+  .first-movement{padding-top:82px}
+}

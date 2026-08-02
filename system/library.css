@@ -100,7 +100,15 @@ img{display:block;width:100%}
 .shelf-heading{display:grid;gap:30px;width:min(100%,1240px);margin:0 auto 64px}
 .shelf-heading h2{max-width:12ch;margin:0;font-size:clamp(49px,11vw,88px);line-height:.88;letter-spacing:-.07em;text-transform:uppercase}
 .shelf-heading>p{max-width:42rem;margin:0;color:var(--muted);font-family:var(--serif);font-size:clamp(19px,4.8vw,28px);line-height:1.45}
-.library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 14px;width:min(100%,1240px);margin:0 auto}
+.collection-list{display:grid;gap:104px;width:min(100%,1240px);margin:0 auto}
+.collection-group{padding-top:30px;border-top:1px solid var(--line)}
+.collection-heading{display:grid;gap:24px;margin-bottom:42px}
+.collection-heading .eyebrow{margin-bottom:15px;color:var(--walnut)}
+.collection-heading h3{max-width:13ch;margin:0;font-size:clamp(42px,10vw,76px);line-height:.86;letter-spacing:-.065em;text-transform:uppercase}
+.collection-introduction{max-width:39rem}
+.collection-introduction p{margin:0;color:var(--muted);font-family:var(--serif);font-size:clamp(18px,4.8vw,25px);line-height:1.4}
+.collection-introduction span{display:inline-block;margin-top:18px;color:var(--teal-soft);font-size:8px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.collection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(145px,100%),1fr));gap:40px 14px;align-items:start}
 .publication-card{min-width:0}
 .publication-card-link{display:block;text-decoration:none}
 .publication-cover{
@@ -123,6 +131,7 @@ img{display:block;width:100%}
 .card-copy{padding:16px 2px 0}
 .card-copy p{margin:0;color:var(--muted);font-family:var(--serif);font-size:13px;line-height:1.45}
 .card-action{display:inline-block;margin-top:10px;color:var(--teal-soft);font-size:8px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.publication-card.preview .publication-cover{outline:1px solid rgba(166,111,82,.52);outline-offset:4px}
 .publication-card.pending .publication-cover{box-shadow:none}
 .publication-card.pending .cover-art{position:relative;background:var(--teal)}
 .publication-card.pending .cover-art::before{
@@ -165,7 +174,10 @@ body.evening .publication-card.pending .cover-art{background:#102b2a}
   .library-hero h1{font-size:clamp(110px,14vw,196px)}
   .shelf-section{padding:130px max(4vw,40px) 150px}
   .shelf-heading{grid-template-columns:1.05fr .95fr;align-items:end;gap:8vw}
-  .library-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:72px 34px}
+  .collection-list{gap:146px}
+  .collection-heading{grid-template-columns:1.05fr .95fr;align-items:end;gap:8vw;margin-bottom:58px}
+  .collection-heading h3{font-size:clamp(54px,6.4vw,88px)}
+  .collection-grid{grid-template-columns:repeat(auto-fit,minmax(240px,310px));gap:72px 34px;justify-content:start}
   .cover-art{height:69%}
   .cover-title{height:31%}
   .cover-title{padding:22px 20px 18px}
@@ -184,5 +196,5 @@ body.evening .publication-card.pending .cover-art{background:#102b2a}
   .site-header nav{gap:14px}
   .site-header nav a:last-child{display:none}
 }
-@media(max-width:340px){.library-grid{grid-template-columns:1fr}.cover-title h3{font-size:34px}}
+@media(max-width:340px){.collection-grid{grid-template-columns:1fr}.cover-title h3{font-size:34px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-cover{transition:none}}
