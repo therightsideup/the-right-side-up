@@ -433,6 +433,31 @@ footer{
   text-transform:uppercase;
 }
 body.evening .blessing .final-word{color:#f3e9db}
+.go-deeper{
+  padding:0 24px 96px;
+  text-align:center;
+  background:var(--paper);
+}
+.go-deeper .eyebrow{margin-bottom:22px}
+.go-deeper-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px 36px;
+}
+.go-deeper-link{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+  text-decoration:none;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
 
 @media(min-width:820px){
   .reader-bar{padding-inline:32px}
