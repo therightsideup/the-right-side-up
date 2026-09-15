@@ -9,5 +9,6 @@ Working stock library imported from Pexels on September 12, 2026. Preserve the o
 | `night-traffic-ariel-schmunck.jpg` | Ariel Schmunck | `pexels-ariel-schmunck-292691263-13345880.jpg` | Related publication card / city movement |
 | `pioneer-square-brett-sayles.jpg` | Brett Sayles | `pexels-brett-sayles-8773449.jpg` | Related publication card / public life |
 | `cassettes-necip-duman.jpg` | Necip Duman | `pexels-necip-duman-3299706-38479779.jpg` | Reserved for Library or Sermons |
+| `stairwell-niklas-jeromin.jpg` | Niklas Jeromin | `pexels-njeromin-13180227.jpg` | Living Hope publication hero |
 
 Before publication, retain a link to each original Pexels asset in the CMS or final media manifest.
