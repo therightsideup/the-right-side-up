@@ -2,210 +2,499 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#183f3e">
-  <meta name="description" content="A guide to prayer in the wait from Luke 17:20–18:8.">
-  <title>Grant Me Justice — The Right Side Up</title>
-  <link rel="icon" href="/icons/rsu-mark.svg?v=2" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/icons/rsu-apple-touch-icon.png?v=1">
-  <link rel="stylesheet" href="/system/grant-me-justice.css?v=3">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#F1EDE6">
+  <meta name="description" content="A guide to prayer in the wait. A Right Side Up Studio publication on Luke 17:20&ndash;18:8.">
+  <link rel="icon" href="/icons/rsu-mark.svg" type="image/svg+xml">
+  <title>Grant Me Justice &mdash; The Right Side Up</title>
+  <style>
+    :root{
+      --newsprint:#F1EDE6;
+      --ink:#171713;
+      --print-red:#D84334;
+      --print-cobalt:#2552A4;
+      --print-yellow:#E1C63A;
+      --night-teal:#102326;
+      --aged-tape:#D2C5A5;
+      color-scheme: light;
+    }
+
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{background:var(--newsprint);}
+    body{
+      margin:0;
+      background:var(--newsprint);
+      color:var(--ink);
+      font-family:'Libre Baskerville', Georgia, serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block;}
+    a{color:inherit;}
+
+    .display{
+      font-family:'Barlow Condensed', 'Arial Narrow', sans-serif;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:-0.01em;
+      line-height:0.82;
+    }
+    .mono{
+      font-family:'IBM Plex Mono', ui-monospace, monospace;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+    }
+
+    /* ---------- site header (matches index.html / library.html) ---------- */
+    .site-header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 4.5vw;
+      border-bottom:1px solid var(--ink);
+      flex-wrap:wrap; gap:12px;
+    }
+    .site-header .wordmark{
+      font-family:'IBM Plex Mono', ui-monospace, monospace;
+      text-transform:uppercase; letter-spacing:0.08em;
+      font-size:13px; text-decoration:none;
+    }
+    .site-header nav{display:flex; gap:22px;}
+    .site-header nav a{
+      font-family:'IBM Plex Mono', ui-monospace, monospace;
+      text-transform:uppercase; letter-spacing:0.08em;
+      font-size:11px; text-decoration:none;
+    }
+
+    /* ---------- shared grain texture (dividers only) ---------- */
+    .grain{position:relative;}
+    .grain::after{
+      content:"";
+      position:absolute; inset:0;
+      pointer-events:none;
+      opacity:.06;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      mix-blend-mode:multiply;
+    }
+
+    /* ---------- the one photo, treated per the Photography spec ---------- */
+    .photo{overflow:hidden; background:var(--night-teal);}
+    .photo img{
+      width:100%; height:100%; object-fit:cover;
+      filter:saturate(.82) contrast(1.08) brightness(.92) sepia(.08);
+    }
+
+    /* ---------- chapter nav (sticky while reading) ---------- */
+    .topnav{
+      position:sticky; top:0; z-index:20;
+      background:var(--newsprint);
+      border-bottom:1px solid var(--ink);
+      padding:18px 4.5vw;
+      display:flex; align-items:center; justify-content:center;
+      flex-wrap:wrap; gap:12px;
+    }
+    .chapternav{display:flex; gap:22px; flex-wrap:wrap;}
+    .chapternav a{font-size:11px; text-decoration:none; border-bottom:1px solid transparent;}
+    .chapternav a:hover{border-bottom-color:var(--ink);}
+    .chapternav a.active{color:var(--print-red);}
+
+    /* ---------- hero (the only photo) ---------- */
+    .hero{
+      display:grid; grid-template-columns: 1.3fr 1fr;
+      border-bottom:1px solid var(--ink);
+    }
+    .hero .photo{aspect-ratio: 4/5; min-height:340px;}
+    .hero-copy{
+      padding:64px 4.5vw;
+      display:flex; flex-direction:column; justify-content:center; gap:18px;
+    }
+    .hero-kicker{font-size:11px; color:var(--print-red);}
+    .hero h1{margin:0; font-size:clamp(40px,6vw,88px);}
+    .hero .rule{width:40px; height:3px; background:var(--print-yellow); border:none;}
+    .hero-sub{font-style:italic; font-size:19px; max-width:34ch; margin:0;}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:11px; padding-bottom:6px;
+      border-bottom:1px solid var(--ink);
+      width:fit-content; text-decoration:none;
+    }
+
+    /* ---------- reading column (everything after the hero) ---------- */
+    .essay, .movement-body{
+      max-width:720px; margin:0 auto; padding:96px 4.5vw 64px;
+    }
+    .movement-body{padding-top:72px; padding-bottom:72px;}
+    .kicker{font-size:11px; color:var(--print-red); margin-bottom:14px;}
+    .essay h2{
+      font-family:'Libre Baskerville', serif; font-weight:700;
+      font-size:clamp(30px,4vw,44px); line-height:1.15; margin:0 0 28px;
+      max-width:18ch;
+    }
+    .essay p, .movement-body p{font-size:18px; line-height:1.6; max-width:62ch; margin:0 0 22px;}
+    blockquote{
+      margin:44px 0; padding-left:24px;
+      border-left:3px solid var(--print-cobalt);
+    }
+    blockquote p{
+      font-size:clamp(22px,2.6vw,30px); line-height:1.35; font-style:italic;
+      max-width:26ch; margin:0;
+    }
+
+    /* ---------- chapter tab strip ---------- */
+    .chaptertabs{
+      display:grid; grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--ink); border-bottom:1px solid var(--ink);
+      max-width:720px; margin:0 auto 0;
+    }
+    .chaptertabs a{
+      padding:16px 12px; text-align:center; font-size:11px; text-decoration:none;
+      border-right:1px solid var(--ink);
+    }
+    .chaptertabs a:last-child{border-right:none;}
+
+    /* ---------- chapter divider (Design Engine spec &mdash; text only) ---------- */
+    .divider{
+      padding:100px 4.5vw 70px;
+      border-bottom:1px solid var(--ink);
+      text-align:center;
+    }
+    .divider .num{font-size:16px; color:var(--print-red); margin-bottom:18px;}
+    .divider h2{
+      margin:0 0 20px; font-size:clamp(48px,8vw,110px); line-height:0.86;
+    }
+    .divider .question{font-style:italic; font-size:17px; max-width:38ch; opacity:.85; margin:0 auto;}
+    .divider .btn{margin-top:32px;}
+
+    /* ---------- movement (text-only content page) ---------- */
+    .movement{border-bottom:1px solid var(--ink);}
+    .movement-body .kicker{margin-bottom:8px;}
+    .scripture{font-size:12px; margin-bottom:26px; opacity:.75;}
+
+    .callouts{
+      display:grid; grid-template-columns:1fr 1fr; gap:1px;
+      background:var(--ink); margin-top:44px; max-width:62ch;
+    }
+    .callouts.single{grid-template-columns:1fr;}
+    .callout{background:var(--newsprint); padding:26px;}
+    .callout .mono{font-size:10px; color:var(--print-cobalt); display:block; margin-bottom:10px;}
+    .callout p{font-size:15px; line-height:1.55; margin:0; max-width:none;}
+
+    /* ---------- word study (Greek/Hebrew term callout) ---------- */
+    .word-study{
+      margin:56px 0; padding:32px 0;
+      border-top:1px solid var(--ink); border-bottom:1px solid var(--ink);
+    }
+    .word-study .greek{
+      font-family:'Libre Baskerville', serif;
+      font-size:clamp(32px,6vw,52px); margin:14px 0 6px; line-height:1.1;
+    }
+    .word-study .translit{font-size:13px; font-style:italic; opacity:.7; margin:0 0 18px;}
+    .word-study p{margin:0; max-width:56ch;}
+
+    /* ---------- history note (historical parallel) ---------- */
+    .history-note{
+      margin:56px 0; padding:4px 0 4px 24px;
+      border-left:3px solid var(--print-yellow);
+    }
+    .history-note .kicker{margin-bottom:12px;}
+    .history-note p{font-size:16px; line-height:1.6; max-width:56ch; margin:0 0 16px;}
+    .history-note p:last-child{margin-bottom:0;}
+
+    /* ---------- detail grid (think/feel/do, numbered steps) ---------- */
+    .detail-grid{
+      display:grid; gap:1px; background:var(--ink);
+      margin:56px 0; max-width:62ch;
+    }
+    .detail-grid.cols-2{grid-template-columns:1fr 1fr;}
+    .detail-grid.cols-3{grid-template-columns:1fr 1fr 1fr;}
+    .detail-grid > div{background:var(--newsprint); padding:24px 22px;}
+    .detail-grid .mono{font-size:10px; color:var(--print-cobalt); display:block; margin-bottom:10px;}
+    .detail-grid p{font-size:15px; line-height:1.55; margin:0; max-width:none;}
+
+    /* ---------- closing (text-only) ---------- */
+    .closing-copy{
+      max-width:640px; margin:0 auto; padding:96px 4.5vw; text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:22px;
+    }
+    .closing-copy p{max-width:44ch; font-size:20px; font-style:italic; margin:0;}
+    .issue-actions{
+      display:flex; gap:28px; flex-wrap:wrap; justify-content:center; margin-top:10px;
+    }
+    .issue-actions a{font-size:11px; text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:4px;}
+    .issue-actions a.primary{
+      background:var(--ink); color:var(--newsprint); border:none; padding:12px 20px;
+    }
+    .fineprint{font-size:11px; opacity:.6; margin-top:8px;}
+
+    /* ---------- kingdom ending (final thesis line) ---------- */
+    .kingdom-ending{
+      text-align:center; padding:56px 4.5vw; border-top:1px solid var(--ink);
+    }
+    .kingdom-ending p{
+      margin:0; font-family:'Barlow Condensed','Arial Narrow',sans-serif; font-weight:800;
+      text-transform:uppercase; font-size:clamp(19px,3vw,30px); line-height:1.2; letter-spacing:-0.01em;
+    }
+    .kingdom-ending p+p{color:var(--print-red); margin-top:4px;}
+
+    footer{
+      padding:24px 4.5vw; display:flex; justify-content:space-between;
+      align-items:center; flex-wrap:wrap; gap:10px; font-size:11px;
+      border-top:1px solid var(--ink);
+    }
+    footer nav{display:flex; gap:18px; flex-wrap:wrap;}
+    footer nav a{text-decoration:none;}
+
+    @media (max-width:820px){
+      .hero{grid-template-columns:1fr;}
+      .hero .photo{aspect-ratio:4/3; min-height:260px;}
+      .chaptertabs{grid-template-columns:1fr 1fr;}
+      .chaptertabs a:nth-child(2){border-right:none;}
+      .callouts{grid-template-columns:1fr;}
+      .detail-grid.cols-2,.detail-grid.cols-3{grid-template-columns:1fr;}
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Libre+Franklin:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="reader-bar">
-    <a class="mark" href="/" aria-label="The Right Side Up home">RSU</a>
-    <nav aria-label="Publication chapters">
-      <a href="#wait">Wait</a>
-      <a href="#cry">Cry</a>
-      <a href="#justice">Justice</a>
-      <a href="#practice">Practice</a>
-    </nav>
-    <button class="theme-toggle" type="button" aria-label="Toggle evening reading mode">◐</button>
-  </header>
 
-  <main>
-    <section class="cover" aria-labelledby="title">
-      <figure class="cover-art">
-        <img src="/assets/grant-me-justice/widow-before-judge.png" alt="A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment.">
-      </figure>
-      <div class="cover-copy">
-        <p class="eyebrow">Publication 03 · Luke 17:20–18:8</p>
-        <h1 id="title">Grant Me<br>Justice</h1>
-        <p class="dek">A guide to prayer in the wait.</p>
-        <a class="begin" href="#opening">Begin reading <span aria-hidden="true">↓</span></a>
+<header class="site-header">
+  <a class="wordmark" href="/">The Right Side Up</a>
+  <nav aria-label="Main navigation">
+    <a href="/library.html">Library</a>
+    <a href="/library.html#art">Art</a>
+  </nav>
+</header>
+
+<nav class="topnav">
+  <div class="chapternav mono">
+    <a href="#wait">Wait</a>
+    <a href="#cry">Cry</a>
+    <a href="#justice">Justice</a>
+    <a href="#practice">Practice</a>
+    <a href="#amen">Amen</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="photo"><img src="https://images.pexels.com/photos/34490685/pexels-photo-34490685/free-photo-of-silhouette-of-a-woman-walking-on-a-cobbled-street.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="A lone figure in dark clothing walks across an empty stone square, seen from above, casting a long shadow."></div>
+  <div class="hero-copy">
+    <div class="hero-kicker mono">A Right Side Up Studio Publication &middot; Luke 17:20&ndash;18:8</div>
+    <h1 class="display">Grant Me<br>Justice</h1>
+    <hr class="rule">
+    <p class="hero-sub">A guide to prayer in the wait.</p>
+    <a class="btn mono" href="#opening">Begin Reading &darr;</a>
+  </div>
+</header>
+
+<section class="essay" id="opening">
+  <div class="kicker mono">On the Road with Jesus</div>
+  <h2>What do we do while we wait for the world to be made right?</h2>
+  <p>Jesus tells a story about a woman with no standing, no advocate, and no leverage&mdash;nothing to bring to the door but the truth of what has happened to her and her refusal to disappear.</p>
+  <p>Luke tells us why Jesus gives the story before it begins: so his disciples will always pray and not give up. But the parable does not stand alone. Chapter 18 opens with one small word: <em>then</em>.</p>
+  <p>Then Jesus told them this parable. Then&mdash;after speaking about the arrival of the Kingdom, the long delay, and the day when the Son of Man will be revealed. The widow&rsquo;s cry belongs inside that waiting world.</p>
+  <blockquote><p>&ldquo;Grant me justice against my adversary.&rdquo;</p></blockquote>
+  <p>She is not asking for comfort. She is not asking for convenience. She is asking for what is right. Jesus places her prayer in the mouths of everyone who has ever wondered whether delay means God has forgotten the case.</p>
+  <p>It does not. The story is unfinished. The wait is not the verdict.</p>
+</section>
+
+<div class="chaptertabs mono">
+  <a href="#wait">Wait</a>
+  <a href="#cry">Cry</a>
+  <a href="#justice">Justice</a>
+  <a href="#practice">Practice</a>
+</div>
+
+<!-- ================= CHAPTER 01 -- THE WAIT ================= -->
+<section class="movement" id="wait">
+  <div class="divider grain">
+    <div class="num mono">01</div>
+    <h2 class="display">Wait</h2>
+    <p class="question">What does faith look like when the Kingdom has arrived but has not finished arriving?</p>
+    <a class="btn mono" href="#wait-body">Read More &darr;</a>
+  </div>
+  <div class="movement-body" id="wait-body">
+    <div class="kicker mono">Life as Usual</div>
+    <div class="scripture mono">Luke 17:20&ndash;37</div>
+    <p><strong>The King is already standing in the room.</strong></p>
+    <p>The Pharisees ask Jesus when the Kingdom of God will come. Their question carries an assumption: the Kingdom will be the kind of thing they can point toward. Here it is. There it is. A visible transfer of power.</p>
+    <p>Jesus answers that the Kingdom is already &ldquo;in your midst.&rdquo; The King is standing in front of them, and they do not recognize his reign because it has not arrived in the form they expected.</p>
+    <p>Then Jesus turns toward his disciples and names the tension they will have to inhabit. The Son of Man will be revealed in glory&mdash;but first he will suffer and be rejected. The crown comes after the cross, not around it.</p>
+    <p><strong>Normal days do not announce the last one.</strong></p>
+    <p>Jesus reaches into Israel&rsquo;s memory: Noah and the flood; Lot and Sodom. He emphasizes the ordinariness of the days before judgment. People ate, drank, married, bought, sold, planted, and built. None of those things were the problem.</p>
+    <p>Life simply carried on as though tomorrow would always look like today. Then the flood came. Then the fire fell.</p>
+    <blockquote><p>The wait may be long. The arrival will not be gradual.</p></blockquote>
+    <p>The disciples ask where judgment will fall. Jesus answers with circling vultures&mdash;an image of judgment landing on people who assumed the day would never come. The warning is not meant to turn his disciples into date-setters. It is meant to keep them awake inside ordinary life.</p>
+    <p>The day is coming. It will not look the way we expect. And it has not come yet.</p>
+    <p>So what do we do with that unfinished space? Jesus does not give another timeline. He gives us a woman who keeps showing up.</p>
+
+    <div class="callouts">
+      <div class="callout">
+        <span class="mono">Notice</span>
+        <p>Where have you mistaken delay for absence? What might it mean to believe the King is already present even before everything has been made right?</p>
       </div>
-    </section>
-
-    <section class="opening reading" id="opening">
-      <p class="eyebrow">On the road with Jesus</p>
-      <h2>What do we do while we wait for the world to be made right?</h2>
-      <p class="lead">Jesus tells a story about a woman with no standing, no advocate, and no leverage—nothing to bring to the door but the truth of what has happened to her and her refusal to disappear.</p>
-      <p>Luke tells us why Jesus gives the story before it begins: so his disciples will always pray and not give up. But the parable does not stand alone. Chapter 18 opens with one small word: <em>then</em>.</p>
-      <p>Then Jesus told them this parable. Then—after speaking about the arrival of the Kingdom, the long delay, and the day when the Son of Man will be revealed. The widow’s cry belongs inside that waiting world.</p>
-      <blockquote>“Grant me justice against my adversary.”</blockquote>
-      <p>She is not asking for comfort. She is not asking for convenience. She is asking for what is right. Jesus places her prayer in the mouths of everyone who has ever wondered whether delay means God has forgotten the case.</p>
-      <p>It does not. The story is unfinished. The wait is not the verdict.</p>
-      <div class="orientation">
-        <span>The Wait</span><span>The Cry</span><span>The Justice</span><span>The Practice</span>
+      <div class="callout">
+        <span class="mono">Prayer</span>
+        <p>Jesus, keep me awake to your Kingdom in the middle of ordinary days. Do not let the delay convince me that you are absent.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="movement" id="wait" data-section="Wait">
-      <figure class="threshold wedding-threshold">
-        <img src="/assets/grant-me-justice/wedding-feast.png" alt="Women, men, and a child share an ordinary wedding feast beneath a simple canopy in first-century Judea.">
-      </figure>
-      <div class="chapter-card">
-        <p class="chapter-number">01 · Life as Usual · Luke 17:20–37</p>
-        <h2>The Wait</h2>
-        <p class="question">What does faith look like when the Kingdom has arrived but has not finished arriving?</p>
+<!-- ================= CHAPTER 02 -- THE CRY (WIDOW) ================= -->
+<section class="movement" id="cry">
+  <div class="divider grain">
+    <div class="num mono">02</div>
+    <h2 class="display">Cry</h2>
+    <p class="question">What can someone with no leverage do when the system refuses to listen?</p>
+    <a class="btn mono" href="#cry-body">Read More &darr;</a>
+  </div>
+  <div class="movement-body" id="cry-body">
+    <div class="kicker mono">The Widow</div>
+    <div class="scripture mono">Luke 18:1&ndash;5</div>
+    <p><strong>She has nothing but her refusal to disappear.</strong></p>
+    <p>In a certain town, Jesus says, there is a judge who neither fears God nor cares what people think. He is accountable to no one. Across from him stands a widow whose social world has left her profoundly exposed.</p>
+    <p>She has no powerful name to invoke, no advocate to argue the case, and no leverage that might make the judge pay attention. Unlike the friend knocking at midnight in Luke 11, she cannot appeal to relationship, hospitality, or shared obligation.</p>
+    <blockquote><p>She can only return to the door.</p></blockquote>
+    <p>Would he see her? Would he remember her name after the third visit, the tenth, or the fiftieth? We do not know. We only know she repeats the same unedited sentence: &ldquo;Grant me justice against my adversary.&rdquo;</p>
+    <p>This is not merely a story about persistence. It is a story about justice. She refuses to stop naming the wrong for what it is.</p>
+
+    <div class="word-study">
+      <div class="kicker mono">A Word Beneath the Story</div>
+      <div class="greek">ὑπωπιάζω</div>
+      <p class="translit">hyp&#333;piaz&#333; &middot; to strike beneath the eye</p>
+      <p>The judge worries that the widow will &ldquo;wear him out.&rdquo; Jesus uses language from the boxing ring: she is going to give him a black eye. Her persistence has become the one pressure an unaccountable man can feel.</p>
+    </div>
+
+    <p><strong>The widow does not win by becoming powerful.</strong></p>
+    <p>She does not outmaneuver the judge or learn to speak his language. She remains what she was: a person telling the truth about an injustice and returning until the truth can no longer be ignored.</p>
+    <p>Her prayer gives language to people whose calls are not returned, whose cases are indefinitely delayed, and whose pain is treated as an inconvenience. Jesus does not tell them to become less disruptive. He honors the cry.</p>
+
+    <div class="callouts">
+      <div class="callout">
+        <span class="mono">Notice</span>
+        <p>What wrong have you been tempted to stop naming because no one seems to listen? Whose cry needs someone to stand beside it?</p>
       </div>
-      <article class="reading">
-        <p class="eyebrow">Luke 17:20–37</p>
-        <h3>The King is already standing in the room.</h3>
-        <p>The Pharisees ask Jesus when the Kingdom of God will come. Their question carries an assumption: the Kingdom will be the kind of thing they can point toward. Here it is. There it is. A visible transfer of power.</p>
-        <p>Jesus answers that the Kingdom is already “in your midst.” The King is standing in front of them, and they do not recognize his reign because it has not arrived in the form they expected.</p>
-        <p>Then Jesus turns toward his disciples and names the tension they will have to inhabit. The Son of Man will be revealed in glory—but first he will suffer and be rejected. The crown comes after the cross, not around it.</p>
-        <h3 class="subhead">Normal days do not announce the last one.</h3>
-        <p>Jesus reaches into Israel’s memory: Noah and the flood; Lot and Sodom. He emphasizes the ordinariness of the days before judgment. People ate, drank, married, bought, sold, planted, and built. None of those things were the problem.</p>
-        <p>Life simply carried on as though tomorrow would always look like today. Then the flood came. Then the fire fell.</p>
-        <blockquote>The wait may be long. The arrival will not be gradual.</blockquote>
-        <p>The disciples ask where judgment will fall. Jesus answers with circling vultures—an image of judgment landing on people who assumed the day would never come. The warning is not meant to turn his disciples into date-setters. It is meant to keep them awake inside ordinary life.</p>
-        <p>The day is coming. It will not look the way we expect. And it has not come yet.</p>
-        <p>So what do we do with that unfinished space? Jesus does not give another timeline. He gives us a woman who keeps showing up.</p>
-        <aside class="practice">
-          <span>Notice</span>
-          <p>Where have you mistaken delay for absence? What might it mean to believe the King is already present even before everything has been made right?</p>
-        </aside>
-        <p class="prayer"><span>Prayer</span> Jesus, keep me awake to your Kingdom in the middle of ordinary days. Do not let the delay convince me that you are absent.</p>
-      </article>
-    </section>
-
-    <section class="movement" id="cry" data-section="Cry">
-      <figure class="threshold cry-threshold">
-        <img src="/assets/grant-me-justice/widow-before-judge.png" width="948" height="1659" alt="A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment.">
-      </figure>
-      <div class="chapter-card">
-        <p class="chapter-number">02 · The Widow · Luke 18:1–5</p>
-        <h2>The Cry</h2>
-        <p class="question">What can someone with no leverage do when the system refuses to listen?</p>
+      <div class="callout">
+        <span class="mono">Prayer</span>
+        <p>God, receive the prayer I am tired of praying. Give me courage to name what is wrong and grace to keep returning to you.</p>
       </div>
-      <article class="reading">
-        <p class="eyebrow">Luke 18:1–5</p>
-        <h3>She has nothing but her refusal to disappear.</h3>
-        <p>In a certain town, Jesus says, there is a judge who neither fears God nor cares what people think. He is accountable to no one. Across from him stands a widow whose social world has left her profoundly exposed.</p>
-        <p>She has no powerful name to invoke, no advocate to argue the case, and no leverage that might make the judge pay attention. Unlike the friend knocking at midnight in Luke 11, she cannot appeal to relationship, hospitality, or shared obligation.</p>
-        <blockquote>She can only return to the door.</blockquote>
-        <p>Would he see her? Would he remember her name after the third visit, the tenth, or the fiftieth? We do not know. We only know she repeats the same unedited sentence: “Grant me justice against my adversary.”</p>
-        <p>This is not merely a story about persistence. It is a story about justice. She refuses to stop naming the wrong for what it is.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="word-study" aria-label="Word study">
-          <p class="eyebrow">A word beneath the story</p>
-          <p class="greek">ὑπωπιάζω</p>
-          <p class="transliteration">hypōpiazō · to strike beneath the eye</p>
-          <p>The judge worries that the widow will “wear him out.” Jesus uses language from the boxing ring: she is going to give him a black eye. Her persistence has become the one pressure an unaccountable man can feel.</p>
-        </div>
+<!-- ================= CHAPTER 03 -- THE JUSTICE ================= -->
+<section class="movement" id="justice">
+  <div class="divider grain">
+    <div class="num mono">03</div>
+    <h2 class="display">Justice</h2>
+    <p class="question">Will he find faith on the earth?</p>
+    <a class="btn mono" href="#justice-body">Read More &darr;</a>
+  </div>
+  <div class="movement-body" id="justice-body">
+    <div class="kicker mono">The Essential Correction</div>
+    <div class="scripture mono">Luke 18:6&ndash;8</div>
+    <blockquote><p>God is not the unjust judge. God is a defender.</p></blockquote>
+    <p><strong>Jesus is arguing from lesser to greater.</strong></p>
+    <p>If even an indifferent and unaccountable judge can be moved by persistence, how much more will God bring about justice for those who cry out to him day and night?</p>
+    <p>The judge responds because he is exhausted. The Father responds because justice belongs to his character. Scripture calls God a father to the fatherless and a defender of widows. He is not a kinder version of the judge. He is everything the judge refuses to be.</p>
+    <blockquote><p>God does not need to be worn down before he cares.</p></blockquote>
+    <p>Jesus speaks of God&rsquo;s chosen ones in the plural. This is not only the private request of one person. It is the shared cry of a people longing for the Kingdom to finish arriving: How long? When will violence end? When will the exploited be restored? When will creation stop groaning?</p>
+    <p><strong>&ldquo;Quickly&rdquo; does not sound like our experience.</strong></p>
+    <p>Prayers continue for years. Some of the saints die still waiting for what they asked to see. Jesus does not deny the delay. The whole parable exists because the delay is real.</p>
+    <p>To understand &ldquo;quickly,&rdquo; we have to return to chapter 17. Lightning flashes. The flood arrives. Fire falls. The waiting is long, but when the decisive moment comes, God&rsquo;s action is not tentative.</p>
+    <blockquote><p>&ldquo;Quickly&rdquo; is not a promise about our calendar. It is a promise about how God finishes what he starts.</p></blockquote>
 
-        <h3 class="subhead">The widow does not win by becoming powerful.</h3>
-        <p>She does not outmaneuver the judge or learn to speak his language. She remains what she was: a person telling the truth about an injustice and returning until the truth can no longer be ignored.</p>
-        <p>Her prayer gives language to people whose calls are not returned, whose cases are indefinitely delayed, and whose pain is treated as an inconvenience. Jesus does not tell them to become less disruptive. He honors the cry.</p>
-        <aside class="practice">
-          <span>Notice</span>
-          <p>What wrong have you been tempted to stop naming because no one seems to listen? Whose cry needs someone to stand beside it?</p>
-        </aside>
-        <p class="prayer"><span>Prayer</span> God, receive the prayer I am tired of praying. Give me courage to name what is wrong and grace to keep returning to you.</p>
-      </article>
-    </section>
+    <div class="history-note">
+      <div class="kicker mono">Freedom Declared. Freedom Enforced.</div>
+      <p>On January 1, 1863, the Emancipation Proclamation declared freedom for enslaved people in the rebelling states. But in Texas, that declaration went unenforced while enslavers continued to exploit the distance between what had been announced and what had arrived.</p>
+      <p>On June 19, 1865, federal authority reached Galveston and General Order No. 3 announced that those held as slaves were free. The announcement did not erase every act of resistance, violence, or exploitation overnight. But the delay could no longer be confused with the verdict.</p>
+    </div>
 
-    <section class="movement" id="justice" data-section="Justice">
-      <div class="big-idea defender-threshold">
-        <p class="eyebrow">03 · The Essential Correction</p>
-        <h2>God is not the unjust judge.</h2>
-        <p>God is a defender.</p>
+    <p><strong>Will he find faith on the earth?</strong></p>
+    <p>The parable ends with a question, not a tidy resolution. Jesus names the risk of a long delay: not that God will stop being just, but that we will stop believing it long enough to keep asking.</p>
+    <p>The widow&rsquo;s qualification is not that she understands the timeline. It is that she keeps returning. She does not decide the case. She refuses to abandon it.</p>
+    <p><strong>The empty tomb is the verdict breaking into history.</strong></p>
+    <p>Jesus himself stands before Pilate and the Sanhedrin with no earthly advocate, a verdict decided before the hearing begins. By oppression and judgment he is taken away. He cries out&mdash;and on the third day he is vindicated.</p>
+    <p>The resurrection does not mean every injustice has already been resolved. It means we know what God&rsquo;s justice looks like when it arrives: the condemned one raised, the rejected one enthroned, and death itself stripped of the final word.</p>
+
+    <div class="callouts">
+      <div class="callout">
+        <span class="mono">Notice</span>
+        <p>Where do you need the empty tomb to answer the delay? What would it mean to trust the verdict even while the story remains unfinished?</p>
       </div>
-      <article class="reading">
-        <p class="eyebrow">Luke 18:6–8</p>
-        <h3>Jesus is arguing from lesser to greater.</h3>
-        <p>If even an indifferent and unaccountable judge can be moved by persistence, how much more will God bring about justice for those who cry out to him day and night?</p>
-        <p>The judge responds because he is exhausted. The Father responds because justice belongs to his character. Scripture calls God a father to the fatherless and a defender of widows. He is not a kinder version of the judge. He is everything the judge refuses to be.</p>
-        <blockquote>God does not need to be worn down before he cares.</blockquote>
-        <p>Jesus speaks of God’s chosen ones in the plural. This is not only the private request of one person. It is the shared cry of a people longing for the Kingdom to finish arriving: How long? When will violence end? When will the exploited be restored? When will creation stop groaning?</p>
-
-        <h3 class="subhead">“Quickly” does not sound like our experience.</h3>
-        <p>Prayers continue for years. Some of the saints die still waiting for what they asked to see. Jesus does not deny the delay. The whole parable exists because the delay is real.</p>
-        <p>To understand “quickly,” we have to return to chapter 17. Lightning flashes. The flood arrives. Fire falls. The waiting is long, but when the decisive moment comes, God’s action is not tentative.</p>
-        <blockquote>“Quickly” is not a promise about our calendar. It is a promise about how God finishes what he starts.</blockquote>
-
-        <div class="history-note">
-          <p class="eyebrow">Freedom declared. Freedom enforced.</p>
-          <p>On January 1, 1863, the Emancipation Proclamation declared freedom for enslaved people in the rebelling states. But in Texas, that declaration went unenforced while enslavers continued to exploit the distance between what had been announced and what had arrived.</p>
-          <p>On June 19, 1865, federal authority reached Galveston and General Order No. 3 announced that those held as slaves were free. The announcement did not erase every act of resistance, violence, or exploitation overnight. But the delay could no longer be confused with the verdict.</p>
-        </div>
-
-        <h3 class="subhead">Will he find faith on the earth?</h3>
-        <p>The parable ends with a question, not a tidy resolution. Jesus names the risk of a long delay: not that God will stop being just, but that we will stop believing it long enough to keep asking.</p>
-        <p>The widow’s qualification is not that she understands the timeline. It is that she keeps returning. She does not decide the case. She refuses to abandon it.</p>
-        <h3 class="subhead">The empty tomb is the verdict breaking into history.</h3>
-        <p>Jesus himself stands before Pilate and the Sanhedrin with no earthly advocate, a verdict decided before the hearing begins. By oppression and judgment he is taken away. He cries out—and on the third day he is vindicated.</p>
-        <p>The resurrection does not mean every injustice has already been resolved. It means we know what God’s justice looks like when it arrives: the condemned one raised, the rejected one enthroned, and death itself stripped of the final word.</p>
-        <aside class="practice">
-          <span>Notice</span>
-          <p>Where do you need the empty tomb to answer the delay? What would it mean to trust the verdict even while the story remains unfinished?</p>
-        </aside>
-        <p class="prayer"><span>Prayer</span> Just and faithful God, keep my hope rooted in the risen Jesus. Teach me to trust how you finish what you begin.</p>
-      </article>
-    </section>
-
-    <section class="practice-section" id="practice" data-section="Practice">
-      <figure class="threshold advocate-threshold" id="advocacy">
-        <img src="/assets/grant-me-justice/widow-justice-companion-v2.png" width="948" height="1659" alt="The widow and a companion walk away together from the immense hall, the companion's arm resting gently around her shoulders.">
-      </figure>
-      <div class="big-idea response-threshold">
-        <p class="eyebrow">04 · The Response</p>
-        <h2>The wait is not the verdict.</h2>
-        <p>Cry out. Do not give up.</p>
+      <div class="callout">
+        <span class="mono">Prayer</span>
+        <p>Just and faithful God, keep my hope rooted in the risen Jesus. Teach me to trust how you finish what you begin.</p>
       </div>
-      <article class="reading">
-        <p class="eyebrow">A way to keep faith alive</p>
-        <h3>Name the wait. Keep crying out. Become an advocate.</h3>
-        <p>The widow’s persistence is not cheerful. She is tired too. Jesus gives us permission to bring that exhaustion to God instead of hiding it beneath a performance of peace.</p>
-        <div class="response-grid justice-response">
-          <div><span>Think</span><p>The delay is not evidence that God has forgotten the case. The story is not finished.</p></div>
-          <div><span>Feel</span><p>It is okay to be tired of asking. Bring the anger, grief, and weariness honestly to God.</p></div>
-          <div><span>Do</span><p>Choose one injustice. Pray over it for seven days, then stand beside someone who currently has no advocate.</p></div>
-        </div>
-        <h3 class="subhead">A simple way to begin.</h3>
-        <div class="response-grid four-steps">
-          <div><span>01 · Name it</span><p>Say plainly what is wrong. Do not soften the truth to make it easier to carry.</p></div>
-          <div><span>02 · Ask</span><p>“Grant me justice.” Return to the prayer each day, even when nothing appears to move.</p></div>
-          <div><span>03 · Watch</span><p>Notice what God is doing in you, around you, and through the people who keep showing up.</p></div>
-          <div><span>04 · Advocate</span><p>Become the person who returns to the door alongside someone whose voice has been ignored.</p></div>
-        </div>
-        <blockquote>Prayer keeps faith alive in the wait.</blockquote>
-        <p class="prayer"><span>Prayer</span> Father, I name the wrong before you. Keep me honest when I am angry, faithful when I am tired, and ready to stand beside those who have no advocate.</p>
-      </article>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="closing">
-      <div>
-        <p class="eyebrow">Luke 18:1</p>
-        <h2>Always pray.<br>Do not give up.</h2>
-        <p>God is nothing like the judge.</p>
+<!-- ================= CHAPTER 04 -- THE PRACTICE ================= -->
+<section class="movement" id="practice">
+  <div class="divider grain">
+    <div class="num mono">04</div>
+    <h2 class="display">Practice</h2>
+    <p class="question">The wait is not the verdict.</p>
+    <a class="btn mono" href="#practice-body">Read More &darr;</a>
+  </div>
+  <div class="movement-body" id="practice-body">
+    <div class="kicker mono">A Way to Keep Faith Alive</div>
+    <blockquote><p>Cry out. Do not give up.</p></blockquote>
+    <p>The widow&rsquo;s persistence is not cheerful. She is tired too. Jesus gives us permission to bring that exhaustion to God instead of hiding it beneath a performance of peace.</p>
+    <p><strong>Name the wait. Keep crying out. Become an advocate.</strong></p>
+
+    <div class="detail-grid cols-3">
+      <div><span class="mono">Think</span><p>The delay is not evidence that God has forgotten the case. The story is not finished.</p></div>
+      <div><span class="mono">Feel</span><p>It is okay to be tired of asking. Bring the anger, grief, and weariness honestly to God.</p></div>
+      <div><span class="mono">Do</span><p>Choose one injustice. Pray over it for seven days, then stand beside someone who currently has no advocate.</p></div>
+    </div>
+
+    <p><strong>A simple way to begin.</strong></p>
+
+    <div class="detail-grid cols-2">
+      <div><span class="mono">01 &middot; Name It</span><p>Say plainly what is wrong. Do not soften the truth to make it easier to carry.</p></div>
+      <div><span class="mono">02 &middot; Ask</span><p>&ldquo;Grant me justice.&rdquo; Return to the prayer each day, even when nothing appears to move.</p></div>
+      <div><span class="mono">03 &middot; Watch</span><p>Notice what God is doing in you, around you, and through the people who keep showing up.</p></div>
+      <div><span class="mono">04 &middot; Advocate</span><p>Become the person who returns to the door alongside someone whose voice has been ignored.</p></div>
+    </div>
+
+    <blockquote><p>Prayer keeps faith alive in the wait.</p></blockquote>
+
+    <div class="callouts single">
+      <div class="callout">
+        <span class="mono">Prayer</span>
+        <p>Father, I name the wrong before you. Keep me honest when I am angry, faithful when I am tired, and ready to stand beside those who have no advocate.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="blessing">
-      <p class="eyebrow">A blessing</p>
-      <p>May your prayer become less afraid of the wait.</p>
-      <p>More honest. More persistent. More convinced that God is just.</p>
-      <p>May you keep asking—and become an advocate for someone who cannot ask alone.</p>
-      <div class="final-rule"></div>
-      <p class="final-word">Jesus turns an already upside-down world right side up.</p>
-    </section>
-  </main>
+<!-- ================= CLOSING -- ALWAYS PRAY (text only) ================= -->
+<section class="closing" id="amen">
+  <div class="closing-copy">
+    <div class="kicker mono">Always Pray. Do Not Give Up.</div>
+    <p>God is nothing like the judge. May your prayer become less afraid of the wait&mdash;more honest, more persistent, more convinced that God is just. May you keep asking, and become an advocate for someone who cannot ask alone.</p>
+    <div class="issue-actions">
+      <a class="primary" href="#opening">Read Online</a>
+    </div>
+    <div class="fineprint mono">Free to read online &middot; made to print and pass along</div>
+  </div>
+</section>
 
-  <footer>
-    <p>@the.rightsideup</p>
-    <p>A guide to prayer in the wait · Luke 17:20–18:8</p>
-  </footer>
-  <script src="/system/grant-me-justice.js?v=2"></script>
+<div class="kingdom-ending">
+  <p>The Kingdom does not turn the world upside down.</p>
+  <p>It turns an upside-down world right side up.</p>
+</div>
+
+<footer>
+  <p>The Right Side Up</p>
+  <p>Jesus turns an already upside-down world right side up.</p>
+  <nav aria-label="Footer navigation">
+    <a href="/library.html">Library</a>
+    <a href="/library.html#art">Art</a>
+    <a href="/#about">About</a>
+    <a href="mailto:hello@therightsideup.org">Correspond</a>
+  </nav>
+</footer>
+
 </body>
 </html>
