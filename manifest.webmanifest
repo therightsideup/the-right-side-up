@@ -4,8 +4,8 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#1C3D3D",
-  "theme_color": "#1C3D3D",
+  "background_color": "#F0EDE6",
+  "theme_color": "#151513",
   "description": "A digital library helping people see Jesus and his Kingdom more clearly.",
   "icons": [
     {
