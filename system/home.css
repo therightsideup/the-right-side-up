@@ -43,7 +43,7 @@ img{display:block;width:100%}
 .hero-photo figcaption{position:absolute;z-index:2;top:16px;right:16px;padding:8px 16px;color:var(--paper);background:var(--red);font:600 9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .margin-note{display:none}
 
-.lead-issue{display:grid;gap:clamp(26px,4vw,50px);padding:clamp(34px,5vw,72px) 0;border-bottom:1px solid var(--line)}
+.lead-issue{position:relative;display:grid;gap:clamp(26px,4vw,50px);padding:clamp(34px,5vw,72px) 0;border-bottom:1px solid var(--line)}
 .lead-statement{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;color:var(--paper);background:var(--ink);box-shadow:7px 8px 0 rgba(21,21,19,.09);transform:rotate(-.45deg)}
 .lead-statement span,.lead-statement small{font:500 8px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .lead-statement strong{max-width:9ch;font:800 clamp(42px,11vw,68px)/.8 var(--display);letter-spacing:-.01em;text-transform:uppercase}
@@ -95,7 +95,7 @@ img{display:block;width:100%}
 .card-money{background-image:url('/assets/photography/night-traffic-ariel-schmunck.jpg')}
 .card-thoughts{background-image:url('/assets/photography/pioneer-square-brett-sayles.jpg')}
 
-.about{padding:clamp(66px,8vw,110px) 0}
+.about{position:relative;padding:clamp(66px,8vw,110px) 0}
 .about h2{max-width:10ch;margin:0;font:800 clamp(54px,13vw,112px)/.82 var(--display);letter-spacing:-.02em;text-transform:uppercase}
 .about>p:last-child{max-width:680px;margin:28px 0 0;font:400 clamp(17px,2vw,23px)/1.55 var(--serif)}
 footer{display:grid;gap:14px;padding:26px 0 32px;border-top:1px solid var(--line);font:500 9px/1.45 var(--mono);letter-spacing:.08em;text-transform:uppercase}
@@ -128,7 +128,7 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
   .hero{grid-template-columns:minmax(390px,.82fr) minmax(0,1.18fr);gap:clamp(28px,3vw,48px);min-height:590px}
   .hero-photo{min-height:0}
   .margin-note{display:block;position:absolute;margin:0;color:var(--muted);font:500 9px/1.35 var(--mono);font-style:italic;transform:rotate(-4deg)}
-  .note-one{left:-38px;top:52px}.note-two{right:-38px;bottom:50px}
+  .note-one{left:-38px;top:52px}.note-two{right:-38px;bottom:50px}.note-three{right:-36px;top:38px}.note-four{left:-36px;bottom:44px}
   .lead-issue{grid-template-columns:minmax(230px,.72fr) minmax(310px,.92fr) minmax(260px,.72fr);align-items:center}
   .issue-notes{grid-column:auto;padding:0 0 0 30px;border-top:0;border-left:1px solid var(--soft)}
   .publication-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
