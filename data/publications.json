@@ -32,8 +32,8 @@
       "coverLabel": "Standalone · John 20–21",
       "status": "live",
       "href": "/publications/living-hope.html",
-      "cover": "/assets/living-hope/cover-resurrection-balanced.png",
-      "coverAlt": "An open tomb cut into a hillside, rendered in spare teal and cream lines."
+      "cover": "/assets/photography/stairwell-niklas-jeromin.jpg",
+      "coverAlt": "A person descends a shadowed stairwell, silhouetted against the light below."
     },
     {
       "shelf": "lukes-parables",
@@ -44,8 +44,8 @@
       "coverLabel": "Stories of the Kingdom · 01 · Luke 11",
       "status": "live",
       "href": "/publications/teach-us-to-pray.html",
-      "cover": "/assets/teach-us-to-pray/road-teaching-approved.png",
-      "coverAlt": "Jesus teaches women and men beside a traveled road through ancient Judea."
+      "cover": "/assets/photography/open-book-pramod-tiwari.jpg",
+      "coverAlt": "An open book rests in warm light, its pages turning toward the light."
     },
     {
       "shelf": "lukes-parables",
@@ -56,8 +56,8 @@
       "coverLabel": "Stories of the Kingdom · 02 · Luke 18",
       "status": "live",
       "href": "/publications/grant-me-justice.html",
-      "cover": "/assets/grant-me-justice/widow-before-judge.png",
-      "coverAlt": "A tiny widow raises her voice before the massive steps and towering entrance of an ancient hall of judgment."
+      "cover": "/assets/photography/pioneer-square-brett-sayles.jpg",
+      "coverAlt": "People wait and pass through Portland's Pioneer Square station."
     },
     {
       "shelf": "life-together",
@@ -68,8 +68,8 @@
       "coverLabel": "Life Together · 01 · James 1:19–27",
       "status": "preview",
       "href": "/publications/the-space-between-us.html?preview=4",
-      "cover": "/assets/the-space-between-us/01-gap-we-feel-home.png",
-      "coverAlt": "Two people stand at opposite ends of a first-century Judean home, rendered in spare teal and cream lines."
+      "cover": "/assets/photography/park-paulo-cerqueira.jpg",
+      "coverAlt": "A small group sits together at a distance in a broad public park."
     },
     {
       "shelf": "life-together",
@@ -80,8 +80,8 @@
       "coverLabel": "Life Together · 02 · Colossians 3",
       "status": "live",
       "href": "/publications/the-work-of-repair.html",
-      "cover": "/assets/the-work-of-repair/01-damage-between-us.png",
-      "coverAlt": "Two people sit far apart in a first-century Judean home with a torn cloth stretched between them."
+      "cover": "/assets/photography/repair-staircase-daniel-wells.jpg",
+      "coverAlt": "A weathered metal staircase rises against an open blue sky."
     }
   ]
 }
