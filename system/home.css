@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap');
 
 :root{
   --paper:#f0ede6;
@@ -41,7 +41,7 @@ img{display:block;width:100%}
 .hero-photo img{height:100%;object-fit:cover;object-position:center 58%;filter:grayscale(1) contrast(1.12) brightness(.84)}
 .hero-photo::after,.publication-card figure::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 45%,transparent 38%,rgba(0,0,0,.27));mix-blend-mode:multiply}
 .hero-photo figcaption{position:absolute;z-index:2;top:16px;right:16px;padding:8px 16px;color:var(--paper);background:var(--red);font:600 9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.margin-note{display:none}
+.margin-note,.pencil-mark{display:none}
 
 .lead-issue{display:grid;gap:clamp(26px,4vw,50px);padding:clamp(34px,5vw,72px) 0;border-bottom:1px solid var(--line)}
 .lead-statement{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;color:var(--paper);background:var(--ink);box-shadow:7px 8px 0 rgba(21,21,19,.09);transform:rotate(-.45deg)}
@@ -127,8 +127,13 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
   .page-shell{border-radius:24px;box-shadow:0 18px 70px rgba(0,0,0,.35)}
   .hero{grid-template-columns:minmax(390px,.82fr) minmax(0,1.18fr);gap:clamp(28px,3vw,48px);min-height:590px}
   .hero-photo{min-height:0}
-  .margin-note{display:block;position:absolute;margin:0;color:var(--muted);font:500 9px/1.35 var(--mono);font-style:italic;transform:rotate(-4deg)}
-  .note-one{left:-38px;top:52px}.note-two{right:-38px;bottom:50px}
+  .margin-note,.pencil-mark{display:block;position:absolute;z-index:3;color:rgba(59,56,52,.55);pointer-events:none}
+  .note-one{left:clamp(34px,5.5vw,82px);top:clamp(42px,5vw,74px);width:240px;margin:0;text-align:center;font:500 31px/.92 "Caveat","Bradley Hand",cursive;letter-spacing:.01em;transform:rotate(-7deg)}
+  .note-one::before{content:"";position:absolute;inset:-25px -34px -21px;border:2px solid currentColor;border-radius:49% 52% 47% 54%;box-shadow:1px 1px 0 rgba(59,56,52,.16),-2px 1px 0 rgba(59,56,52,.1);transform:rotate(-5deg)}
+  .note-one::after{content:"";position:absolute;left:74px;bottom:-7px;width:120px;border-top:2px solid currentColor;border-radius:50%;transform:rotate(-3deg)}
+  .note-plus{left:calc(40% - 12px);bottom:92px;font:500 48px/1 "Caveat","Bradley Hand",cursive;transform:rotate(13deg)}
+  .subhead{position:relative;width:max-content}
+  .subhead::after{content:"";position:absolute;left:-3px;right:-8px;bottom:-9px;height:5px;border-top:2px solid rgba(59,56,52,.48);border-radius:50%;transform:rotate(-1deg)}
   .lead-issue{grid-template-columns:minmax(230px,.72fr) minmax(310px,.92fr) minmax(260px,.72fr);align-items:center}
   .issue-notes{grid-column:auto;padding:0 0 0 30px;border-top:0;border-left:1px solid var(--soft)}
   .publication-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
