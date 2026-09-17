@@ -104,6 +104,7 @@ img{display:block;width:100%}
 
 .about{position:relative;padding:clamp(66px,8vw,110px) 0}
 .about h2{max-width:10ch;margin:0;font:800 clamp(54px,13vw,112px)/.82 var(--display);letter-spacing:-.02em;text-transform:uppercase}
+.about h2 span{display:block;white-space:nowrap}
 .about>p:last-child{max-width:680px;margin:28px 0 0;font:400 clamp(17px,2vw,23px)/1.55 var(--serif)}
 footer{display:grid;gap:14px;padding:26px 0 32px;border-top:1px solid var(--line);font:500 9px/1.45 var(--mono);letter-spacing:.08em;text-transform:uppercase}
 footer p{margin:0}
