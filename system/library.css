@@ -82,12 +82,12 @@ footer{display:grid;gap:14px;padding:26px 0 32px;border-top:1px solid var(--line
 footer p{margin:0}footer nav{display:flex;gap:18px;flex-wrap:wrap}footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
 
 @media (min-width:700px){
-  .library-intro{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);align-items:end}
+  .library-intro{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);align-items:end;container-type:inline-size}
   .library-intro .eyebrow{grid-column:1/-1}
-  .library-intro h1{font-size:clamp(126px,19vw,220px)}
+  .library-intro h1{font-size:clamp(126px,calc(19.8cqi - 15px),254px)}
   .featured{grid-template-columns:minmax(310px,.75fr) minmax(0,1.25fr);align-items:stretch}
   .featured-copy h2{font-size:clamp(82px,11.5vw,150px)}
-  .featured-image{aspect-ratio:auto;min-height:460px}
+  .featured-image{aspect-ratio:auto;min-height:460px;max-height:640px}
   .issue-list{grid-template-columns:repeat(2,minmax(0,1fr))}
   .issue-list article:nth-child(odd){padding-right:clamp(22px,4vw,52px);border-right:1px solid var(--soft)}
   .issue-list article:nth-child(even){padding-left:clamp(22px,4vw,52px)}
