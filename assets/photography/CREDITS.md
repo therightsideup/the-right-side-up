@@ -10,5 +10,7 @@ Working stock library imported from Pexels on September 12, 2026. Preserve the o
 | `pioneer-square-brett-sayles.jpg` | Brett Sayles | `pexels-brett-sayles-8773449.jpg` | Related publication card / public life |
 | `cassettes-necip-duman.jpg` | Necip Duman | `pexels-necip-duman-3299706-38479779.jpg` | Reserved for Library or Sermons |
 | `stairwell-niklas-jeromin.jpg` | Niklas Jeromin | `pexels-njeromin-13180227.jpg` | Living Hope publication hero |
+| `open-book-pramod-tiwari.jpg` | Pramod Tiwari | `pexels-pramodtiwari-13288524.jpg` | Teach Us to Pray theme photograph |
+| `repair-staircase-daniel-wells.jpg` | Daniel Wells | `pexels-danielwells67-38714965.jpg` | The Work of Repair theme photograph |
 
 Before publication, retain a link to each original Pexels asset in the CMS or final media manifest.

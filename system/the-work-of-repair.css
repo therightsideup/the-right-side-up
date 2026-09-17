@@ -2,7 +2,7 @@
 
 .cover{grid-template-rows:auto auto}
 .cover-art{background:var(--paper)}
-.cover-art img{object-position:center bottom}
+.cover-art img{object-position:center center}
 .cover-copy{display:flex;flex-direction:column;justify-content:flex-end}
 .cover-copy::before{position:static;flex:0 0 auto;margin:0 0 26px}
 .cover h1{font-size:clamp(55px,15vw,98px)}
@@ -37,7 +37,7 @@
 @media(min-width:820px){
   .cover{grid-template-columns:minmax(0,1.12fr) minmax(430px,.88fr);grid-template-rows:1fr}
   .cover-art{display:grid;place-items:center;min-height:100svh}
-  .cover-art img{height:100svh;object-fit:cover;object-position:center bottom}
+  .cover-art img{height:100svh;object-fit:cover;object-position:center center}
   .cover-copy{padding-inline:52px}
   .cover h1{font-size:clamp(64px,6vw,102px)}
   .threshold{width:min(100% - 80px,900px);height:clamp(460px,72svh,680px)}
@@ -48,7 +48,7 @@
   .reader-bar nav{gap:13px}
   .reader-bar nav a{font-size:8px;letter-spacing:.07em}
   .cover-art{height:56svh;min-height:0}
-  .cover-art img{height:100%;object-fit:cover;object-position:center bottom}
+  .cover-art img{height:100%;object-fit:cover;object-position:center center}
   .cover-copy{padding:31px 24px 38px}
   .cover h1{font-size:clamp(49px,14.5vw,64px);line-height:.82}
   .cover .dek{margin:20px 0 25px;font-size:19px}
