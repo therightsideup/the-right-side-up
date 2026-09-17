@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f1ede6">
+  <title>Homepage Preview — The Right Side Up</title>
+  <link rel="icon" href="../icons/rsu-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../system/home.css?v=30">
+  <style>
+    /* Preview-only treatment. Promote to home.css after visual approval. */
+    .margin-doodle img,
+    .plus-mark img,
+    .subhead-pencil img {
+      filter: grayscale(1) contrast(1.68) brightness(1.1);
+      opacity: .66;
+    }
+
+    .margin-doodle {
+      -webkit-mask-image: radial-gradient(ellipse at 50% 48%, #000 0 58%, rgba(0,0,0,.92) 70%, rgba(0,0,0,.42) 84%, transparent 100%);
+      mask-image: radial-gradient(ellipse at 50% 48%, #000 0 58%, rgba(0,0,0,.92) 70%, rgba(0,0,0,.42) 84%, transparent 100%);
+    }
+
+    .preview-label {
+      position: fixed;
+      z-index: 40;
+      right: 18px;
+      bottom: 18px;
+      padding: 9px 12px;
+      color: var(--paper);
+      background: var(--ink);
+      font: 600 8px/1 var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="../">The Right Side Up</a>
+      <nav aria-label="Main navigation">
+        <a href="../library.html">Library</a>
+        <a href="../library.html#art">Art</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="margin-doodle" aria-hidden="true">
+            <img src="../assets/marks/field-journal-reference.png" alt="">
+          </div>
+          <p class="eyebrow">Featured series · Proverbs</p>
+          <h1 id="hero-title">Wisdom<br>in Real Life<span class="plus-mark" aria-hidden="true"><img src="../assets/marks/field-journal-reference.png" alt=""></span></h1>
+          <p class="subhead">A publication series on Proverbs<span class="subhead-pencil" aria-hidden="true"><img src="../assets/marks/field-journal-reference.png" alt=""></span></p>
+        </div>
+        <figure class="hero-photo">
+          <img class="photo-35mm" src="../assets/photography/wet-crosswalk-shotsbyvo.jpg" alt="A person crosses a broad city intersection after rain while traffic moves around them.">
+          <figcaption>Issue 01</figcaption>
+          <p class="photo-tag">Ancient wisdom<br>Ordinary streets</p>
+        </figure>
+      </section>
+    </main>
+  </div>
+  <p class="preview-label">Homepage preview · not indexed</p>
+</body>
+</html>
