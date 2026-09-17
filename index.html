@@ -8,7 +8,7 @@
   <title>The Right Side Up</title>
   <link rel="icon" href="/icons/rsu-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icons/rsu-apple-touch-icon.png">
-  <link rel="stylesheet" href="/system/home.css?v=26">
+  <link rel="stylesheet" href="/system/home.css?v=27">
 </head>
 <body>
   <div class="page-shell">
@@ -24,8 +24,17 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <div class="margin-doodle" aria-hidden="true">
-            <svg class="doodle-circle" viewBox="0 0 260 130" preserveAspectRatio="none">
-              <path d="M18,68 C10,32 55,10 130,8 C205,6 248,26 244,58 C240,94 185,116 118,114 C52,112 10,98 20,66 C24,58 30,60 36,62" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <svg class="doodle-circle" viewBox="0 0 360 200" preserveAspectRatio="none">
+              <filter id="pencil-roughness" x="-8%" y="-8%" width="116%" height="116%">
+                <feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="2" seed="8" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+              <g fill="none" stroke="currentColor" stroke-linecap="round" filter="url(#pencil-roughness)">
+                <path d="M24 108C-2 66 55 23 160 15c102-8 174 18 181 66 8 55-64 94-167 99C76 184 14 156 24 108Z" stroke-width="1.55"/>
+                <path d="M18 111C3 63 66 27 164 20c96-7 167 17 170 62 4 51-63 88-158 94C82 181 21 153 18 111Z" stroke-width=".8" opacity=".58"/>
+                <path d="M5 78C42 50 80 35 119 29" stroke-width="1.1" opacity=".65"/>
+                <path d="M302 156l26 10M308 150l18 20M60 184l31-8M337 61l8-13" stroke-width="1.1" opacity=".48"/>
+              </g>
             </svg>
             <p>For the life<br>we <span class="doodle-emph">actually</span> live.</p>
           </div>
