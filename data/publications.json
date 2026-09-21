@@ -15,11 +15,11 @@
       "note": "2 publications"
     },
     {
-      "id": "life-together",
-      "eyebrow": "Collection 02 · Formation",
-      "title": "Life Together",
-      "description": "How the life of Jesus takes shape in the space between us.",
-      "note": "A growing collection"
+      "id": "the-space-between-us",
+      "eyebrow": "Collection 02 · Relationships",
+      "title": "The Space Between Us",
+      "description": "Distance, forgiveness, and repair in the relationships we actually live.",
+      "note": "2 publications"
     }
   ],
   "publications": [
@@ -60,24 +60,24 @@
       "coverAlt": "People wait and pass through Portland's Pioneer Square station."
     },
     {
-      "shelf": "life-together",
+      "shelf": "the-space-between-us",
       "seriesNumber": 1,
       "title": "The Space\nBetween Us",
       "blurb": "Every relationship has a gap. What we do there reveals our faith.",
       "scripture": "James 1:19–27",
-      "coverLabel": "Life Together · 01 · James 1:19–27",
+      "coverLabel": "The Space Between Us · 01 · James 1:19–27",
       "status": "preview",
       "href": "/publications/the-space-between-us.html?preview=4",
       "cover": "/assets/photography/park-paulo-cerqueira.jpg",
       "coverAlt": "A small group sits together at a distance in a broad public park."
     },
     {
-      "shelf": "life-together",
+      "shelf": "the-space-between-us",
       "seriesNumber": 2,
       "title": "The Work\nof Repair",
       "blurb": "Forgiveness makes healing possible. Repair requires participation.",
       "scripture": "Colossians 3:5–14",
-      "coverLabel": "Life Together · 02 · Colossians 3",
+      "coverLabel": "The Space Between Us · 02 · Colossians 3",
       "status": "live",
       "href": "/publications/the-work-of-repair.html",
       "cover": "/assets/photography/repair-staircase-daniel-wells.jpg",

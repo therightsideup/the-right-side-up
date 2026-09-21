@@ -148,6 +148,9 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
   .wordmark{max-width:9ch}
   .site-header nav a{font-size:9px}
   .hero-copy{grid-row:1}.hero-photo{grid-row:2}
+  .margin-doodle{width:100%;margin-bottom:18px}
+  .margin-doodle img{left:-15%;top:-42%;width:340%}
+  .subhead-pencil{width:min(320px,calc(100vw - 36px))}
   .home-library>header{display:block}
   .home-library>header .text-link{display:inline-block;margin-top:24px}
 }

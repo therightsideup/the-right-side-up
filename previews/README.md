@@ -12,3 +12,4 @@ Workflow:
 Current preview:
 
 - `homepage.html` — homepage hero and field-journal treatment
+- `library.html` — series-first library organization, with *The Space Between Us* as the relationship collection and *Living Hope* as a standalone work
