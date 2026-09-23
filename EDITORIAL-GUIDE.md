@@ -96,13 +96,13 @@ Most RSU publications move through these components:
 7. **Big idea** - name what the whole publication has been trying to make visible.
 8. **Blessing or sending** - close with grace, not pressure.
 
-Not every essay needs every component. The sequence is a vocabulary, not a formula.
+Not every observation needs every component. The sequence is a vocabulary, not a formula.
 
-## Essays
+## Observations
 
-Essays may begin with an observation, tension, question, memory, or ordinary scene rather than a sermon outline. They still belong to the same editorial world.
+Observations are reflections on culture, leadership, faith, and recreation. They may begin with a tension, question, memory, or ordinary scene rather than a sermon outline. They still belong to the same editorial world.
 
-An essay should:
+An observation should:
 
 - Make one central claim or explore one honest question.
 - Stay grounded in lived experience and Scripture where appropriate.
@@ -179,4 +179,3 @@ Before release, ask:
 6. Is the work honest about suffering and complexity?
 7. Is there somewhere faithful to go from here?
 8. Does every format still feel like the same publication?
-

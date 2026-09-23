@@ -72,6 +72,7 @@ a{color:inherit}img{display:block;width:100%}
 .future-room{position:relative;padding:clamp(54px,7vw,92px) 0}
 .future-room+.future-room{border-top:1px solid var(--line)}
 .future-room h2{margin:0;font:800 clamp(86px,22vw,174px)/.73 var(--display);letter-spacing:-.02em;text-transform:uppercase}
+.future-room.essays h2{font-size:clamp(58px,15vw,132px)}
 .future-room>p:not(.eyebrow){max-width:32rem;margin:24px 0;font:400 16px/1.6 var(--serif)}
 .future-room span{font:600 8px/1.4 var(--mono);letter-spacing:.09em;text-transform:uppercase}
 .future-room.art::after{content:"TBD";position:absolute;right:2px;top:48px;padding:8px 12px;color:var(--paper);background:var(--ink);font:600 9px/1 var(--mono);letter-spacing:.12em;transform:rotate(3deg)}
@@ -100,6 +101,7 @@ footer p{margin:0}footer nav{display:flex;gap:18px;flex-wrap:wrap}footer a{width
   .future-room{padding-right:clamp(24px,4vw,56px)}
   .future-room+.future-room{padding-left:clamp(24px,4vw,56px);padding-right:0;border-top:0;border-left:1px solid var(--line)}
   .future-room h2{font-size:clamp(94px,12vw,164px)}
+  .future-room.essays h2{font-size:clamp(72px,8.2vw,132px)}
   .gift{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:48px;align-items:end}
   .gift .eyebrow{grid-column:1/-1}
   .gift>p:last-child{margin:0}
@@ -119,5 +121,5 @@ footer p{margin:0}footer nav{display:flex;gap:18px;flex-wrap:wrap}footer a{width
   .publication-grid .text-card{grid-column:auto}
 }
 
-@media (max-width:520px){.site-header{min-height:58px}.wordmark{max-width:9ch}.site-header nav a{font-size:9px}}
+@media (max-width:520px){.site-header{min-height:58px}.wordmark{max-width:9ch}.site-header nav{gap:10px}.site-header nav a{font-size:8px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication img{transition:none}}

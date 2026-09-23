@@ -22,7 +22,7 @@ img{display:block;width:100%}
 .page-shell{position:relative;width:min(100%,1480px);margin-inline:auto;overflow:hidden;background:var(--paper)}
 .page-shell::after{content:"";position:absolute;z-index:20;inset:0;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:multiply}
 
-.site-header,.hero,.lead-issue,.home-library,.new-rooms,.issue-strip,.about,footer{margin-inline:var(--gutter)}
+.site-header,.hero,.lead-issue,.home-library,.new-rooms,.site-portals,.issue-strip,.about,footer{margin-inline:var(--gutter)}
 .site-header{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}
 .wordmark{font:800 clamp(15px,1.5vw,19px)/1 var(--display);letter-spacing:.14em;text-decoration:none;text-transform:uppercase}
 .site-header nav,.site-header nav a{display:flex;align-items:center}
@@ -33,17 +33,12 @@ img{display:block;width:100%}
 .text-link,.button{font:600 9px/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase}
 .text-link{text-decoration:none;border-bottom:1px solid;padding-bottom:5px}
 
-.hero{position:relative;display:grid;gap:24px;padding:clamp(28px,4vw,58px) 0;border-bottom:1px solid var(--line)}
+.hero{position:relative;display:grid;gap:24px;padding:clamp(22px,2.8vw,40px) 0 clamp(38px,4vw,58px);border-bottom:1px solid var(--line)}
 .hero-copy{position:relative;min-width:0;align-self:center;container-type:inline-size}
 .hero h1{position:relative;max-width:7.1ch;margin:0;font:800 clamp(64px,34cqi,180px)/.76 var(--display);letter-spacing:-.025em;text-transform:uppercase}
-.hero h1 .plus-mark{position:absolute;right:-.46em;top:53%;display:block;width:.42em;height:.42em;overflow:hidden;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(circle,#000 48%,transparent 82%);mask-image:radial-gradient(circle,#000 48%,transparent 82%)}
-.hero h1 .plus-mark img{position:absolute;left:-706.7%;top:-986.7%;width:1800%;max-width:none}
 .subhead{position:relative;width:max-content;margin:22px 0 0;font:500 10px/1.45 var(--mono);letter-spacing:.16em;text-transform:uppercase}
 .subhead-pencil{position:absolute;left:-7px;bottom:-31px;display:block;width:320px;height:34px;overflow:hidden;mix-blend-mode:multiply;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 90%,transparent)}
-.subhead-pencil img{position:absolute;left:-64px;top:-940px;width:1234px;max-width:none}
-.margin-doodle{position:relative;width:min(360px,100%);aspect-ratio:5/3;margin:0 0 30px;overflow:hidden;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse at 50% 48%,#000 0 58%,rgba(0,0,0,.92) 70%,rgba(0,0,0,.42) 84%,transparent 100%);mask-image:radial-gradient(ellipse at 50% 48%,#000 0 58%,rgba(0,0,0,.92) 70%,rgba(0,0,0,.42) 84%,transparent 100%)}
-.margin-doodle img{position:absolute;left:-4%;top:-33.333%;width:270%;max-width:none}
-.margin-doodle img,.plus-mark img,.subhead-pencil img{filter:grayscale(1) contrast(1.68) brightness(1.1);opacity:.66}
+.subhead-pencil img{position:absolute;left:-64px;top:-940px;width:1234px;max-width:none;filter:grayscale(1) contrast(1.68) brightness(1.1);opacity:.66}
 .hero-photo{position:relative;margin:0;overflow:hidden;background:#222;aspect-ratio:4/5}
 .hero-photo img{height:100%;object-fit:cover;object-position:center 58%;filter:grayscale(1) contrast(1.12) brightness(.84)}
 .hero-photo::after,.publication-card figure::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 45%,transparent 38%,rgba(0,0,0,.27));mix-blend-mode:multiply}
@@ -87,9 +82,18 @@ img{display:block;width:100%}
 .room{position:relative;display:block;padding:clamp(54px,7vw,92px) 0;text-decoration:none;container-type:inline-size}
 .room+.room{border-top:1px solid var(--line)}
 .room h2{margin:0;font:800 clamp(70px,33cqi,190px)/.73 var(--display);letter-spacing:-.02em;text-transform:uppercase}
+.essays-room h2{font-size:clamp(54px,22cqi,132px)}
 .room>p:not(.eyebrow){max-width:32rem;margin:24px 0;font:400 16px/1.6 var(--serif)}
 .room span{font:600 8px/1.4 var(--mono);letter-spacing:.09em;text-transform:uppercase}
 .art-room::after{content:"TBD";position:absolute;right:2px;top:48px;padding:8px 12px;color:var(--paper);background:var(--ink);font:600 9px/1 var(--mono);letter-spacing:.12em;transform:rotate(3deg)}
+
+.site-portals{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.site-portal{position:relative;display:flex;min-height:clamp(220px,24vw,320px);align-items:center;padding:clamp(28px,4vw,58px) 44px clamp(28px,4vw,58px) 0;text-decoration:none}
+.site-portal+.site-portal{border-top:1px solid var(--line)}
+.site-portal::after{content:"↗";position:absolute;right:4px;top:clamp(28px,4vw,58px);font:400 24px/1 var(--mono)}
+.site-portal h2{margin:0;font:800 clamp(76px,24vw,180px)/.73 var(--display);letter-spacing:-.025em;text-transform:uppercase;transition:color .2s ease}
+.site-portal p{max-width:25rem;margin:24px 0 0;font:400 clamp(14px,1.6vw,17px)/1.55 var(--serif)}
+.site-portal:hover h2,.site-portal:focus-visible h2{color:var(--red)}
 
 .issue-strip{display:grid;padding:12px 0;border-bottom:1px solid var(--line);gap:10px}
 .issue-strip article{position:relative;isolation:isolate;min-height:220px;padding:24px;overflow:hidden;color:var(--paper);background-color:var(--ink);background-size:cover;background-position:center}
@@ -121,6 +125,11 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
   .new-rooms{grid-template-columns:1fr 1fr}
   .room{padding-right:clamp(24px,4vw,56px)}
   .room+.room{padding-left:clamp(24px,4vw,56px);padding-right:0;border-top:0;border-left:1px solid var(--line)}
+  .site-portals{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .site-portal{min-height:clamp(250px,24vw,340px);padding-right:clamp(22px,3vw,48px)}
+  .site-portal+.site-portal{padding-left:clamp(22px,3vw,48px);border-top:0;border-left:1px solid var(--line)}
+  .site-portal h2{font-size:clamp(72px,8.5vw,132px)}
+  .site-portal p{font-size:clamp(13px,1.2vw,16px)}
   .issue-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
   .about{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:48px;align-items:end}
   .about .eyebrow{grid-column:1/-1}
@@ -131,10 +140,9 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
 @media (min-width:1040px){
   body{padding:18px}
   .page-shell{border-radius:24px;box-shadow:0 18px 70px rgba(0,0,0,.35)}
-  .hero{grid-template-columns:minmax(430px,.9fr) minmax(0,1.1fr);gap:clamp(28px,3vw,48px);min-height:calc(100vh - 118px)}
-  .hero-copy{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(34px,5vh,72px)}
-  .margin-doodle{position:absolute;left:0;top:-25px;width:clamp(320px,28vw,390px);max-width:none;margin:0}
-  .hero-photo{min-height:0}
+  .hero{grid-template-columns:minmax(430px,.9fr) minmax(0,1.1fr);gap:clamp(28px,3vw,48px);min-height:0}
+  .hero-copy{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-start;padding-top:clamp(12px,1.6vw,24px)}
+  .hero-photo{min-height:clamp(560px,48vw,700px)}
   .lead-issue{grid-template-columns:minmax(230px,.72fr) minmax(310px,.92fr) minmax(260px,.72fr);align-items:center}
   .issue-notes{grid-column:auto;padding:0 0 0 30px;border-top:0;border-left:1px solid var(--soft)}
   .publication-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -147,12 +155,12 @@ footer a{width:max-content;text-decoration:none;border-bottom:1px solid}
   .site-header{min-height:58px}
   .wordmark{max-width:9ch}
   .site-header nav a{font-size:9px}
+  .site-header nav{gap:10px}
+  .site-header nav a{font-size:8px}
   .hero-copy{grid-row:1}.hero-photo{grid-row:2}
-  .margin-doodle{width:100%;margin-bottom:18px}
-  .margin-doodle img{left:-15%;top:-42%;width:340%}
   .subhead-pencil{width:min(320px,calc(100vw - 36px))}
   .home-library>header{display:block}
   .home-library>header .text-link{display:inline-block;margin-top:24px}
 }
 
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-card img{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.publication-card img{transition:none}.site-portal h2{transition:none}}

@@ -1,25 +1,40 @@
 {
   "shelves": [
     {
+      "id": "wisdom-in-real-life",
+      "eyebrow": "Series 01 · Proverbs",
+      "title": "Wisdom in Real Life",
+      "description": "Eight field guides through Proverbs for the ordinary life we are actually living.",
+      "note": "8 issues",
+      "href": "/series/wisdom-in-real-life.html",
+      "cover": "/assets/photography/wet-crosswalk-shotsbyvo.jpg"
+    },
+    {
       "id": "living-hope",
       "eyebrow": "Featured publication",
       "title": "Living Hope",
       "description": "Three encounters with the risen Jesus in grief, doubt, and failure.",
-      "note": "John 20–21"
+      "note": "John 20–21",
+      "href": "/publications/living-hope.html",
+      "cover": "/assets/photography/stairwell-niklas-jeromin.jpg"
     },
     {
       "id": "lukes-parables",
       "eyebrow": "Collection 01 · The parables of Jesus",
       "title": "Stories of the Kingdom",
       "description": "Prayer, justice, and the character of God in the stories Jesus told.",
-      "note": "2 publications"
+      "note": "2 publications",
+      "href": "/series/stories-of-the-kingdom.html",
+      "cover": "/assets/photography/cassettes-necip-duman.jpg"
     },
     {
       "id": "the-space-between-us",
       "eyebrow": "Collection 02 · Relationships",
       "title": "The Space Between Us",
       "description": "Distance, forgiveness, and repair in the relationships we actually live.",
-      "note": "2 publications"
+      "note": "2 publications",
+      "href": "/series/the-space-between-us.html",
+      "cover": "/assets/photography/night-traffic-ariel-schmunck.jpg"
     }
   ],
   "publications": [
