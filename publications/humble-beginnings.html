@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f0ede6">
+<meta name="description" content="The first wisdom we need: reverence, humility, and a listening heart. A Wisdom in Real Life field guide.">
+<title>Humble Beginnings — The Right Side Up</title>
+<link rel="icon" href="/icons/rsu-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /*
+    Rebuilt against the LIVE site (therightsideup.org / publications/living-hope.html),
+    not against the project docs alone — the docs describe a broader palette
+    (cobalt / yellow / night-teal / aged-tape) that the real implementation
+    does not use. Tokens below are read directly off the live stylesheet.
+    Single visual world (ink on paper), no dark-mode variant, by the same
+    logic as a printed page — matches the live site's own behavior.
+  */
+
+  :root {
+    --paper: #f0ede6;
+    --ink: #151513;
+    --muted: #65615a;
+    --red: #a93b32;
+    --line: rgba(21,21,19,.42);
+    --soft: rgba(21,21,19,.16);
+    --gutter: clamp(18px, 4vw, 64px);
+    --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --serif: "Libre Baskerville", Georgia, serif;
+    --body-font: "Libre Franklin", Arial, sans-serif;
+    --mono: "IBM Plex Mono", monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { background: var(--paper); margin: 0; }
+  body { color: var(--ink); font-family: var(--serif); -webkit-font-smoothing: antialiased; }
+  img, svg { max-width: 100%; }
+  ::selection { background: var(--soft); }
+
+  .kicker {
+    font-family: var(--mono);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: var(--red);
+    display: block;
+  }
+  .kicker.muted { color: var(--muted); }
+
+  .display {
+    font-family: var(--display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+  }
+
+  .rule { border: none; border-top: 1px solid var(--soft); margin: 0; }
+
+  /* ---------- shell ---------- */
+  .masthead {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px var(--gutter);
+    border-bottom: 1px solid var(--soft);
+  }
+  .masthead .wordmark { color: inherit; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 15px; letter-spacing: 0.01em; text-decoration: none; }
+  .masthead nav { display: flex; gap: 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+  .masthead nav a { color: inherit; text-decoration: none; }
+
+  .subnav {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; gap: 26px; flex-wrap: wrap;
+    padding: 14px var(--gutter);
+    background: var(--paper);
+    border-bottom: 1px solid var(--soft);
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .subnav a { color: var(--muted); text-decoration: none; scroll-margin-top: 60px; }
+  .subnav a.active { color: var(--red); }
+
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 860px) { .hero { grid-template-columns: 1fr 1fr; min-height: 78vh; } }
+
+  .hero-art {
+    position: relative;
+    min-height: 46vh;
+    background-image: url("/assets/photography/humble-beginnings-machu-picchu.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .hero-art::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,14,12,0) 45%, rgba(10,14,12,0.62) 100%);
+  }
+  .hero-art::after {
+    content: ""; position: absolute; inset: 0; opacity: 0.3; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .hero-art .cap {
+    position: absolute; left: var(--gutter); bottom: 20px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(240,237,230,0.72);
+  }
+
+  .hero-text {
+    display: flex; flex-direction: column; justify-content: center; gap: 22px;
+    padding: 56px var(--gutter);
+  }
+  .hero-text .display.title { font-size: clamp(52px, 9vw, 104px); line-height: 0.82; margin: 0; }
+  .hero-text .dek { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ink); max-width: 32ch; }
+  .hero-text .begin { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 3px; width: fit-content; }
+
+  /* ---------- content sections ---------- */
+  .section { padding: 88px var(--gutter); border-bottom: 1px solid var(--soft); }
+  .section.tight { padding-top: 56px; padding-bottom: 56px; }
+  .col {
+    max-width: 640px;
+  }
+  .col.indent { margin-left: 0; }
+  @media (min-width: 860px) { .col.indent { margin-left: calc(50% - 320px); } }
+
+  h2.essay-title {
+    font-family: var(--serif); font-weight: 700; font-style: normal;
+    font-size: clamp(28px, 4.4vw, 42px); line-height: 1.12; margin: 10px 0 26px;
+  }
+
+  p.body { font-size: 17px; line-height: 1.62; margin: 0 0 20px; }
+  p.body.lede { font-size: 18px; }
+  p.body strong { font-weight: 700; }
+
+  blockquote.pull {
+    margin: 34px 0; padding-left: 20px; border-left: 2px solid var(--ink);
+    font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.55;
+    max-width: 46ch;
+  }
+  blockquote.pull p { margin: 0; }
+
+  .scripture-ref { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: -8px 0 20px; }
+
+  .chapter-index { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+  .chapter-index a {
+    display: flex; align-items: baseline; gap: 18px;
+    padding: 18px 0; border-top: 1px solid var(--soft);
+    text-decoration: none; color: var(--ink);
+  }
+  .chapter-index a:last-child { border-bottom: 1px solid var(--soft); }
+  .chapter-index .n { font-family: var(--mono); font-size: 12px; color: var(--red); width: 22px; }
+  .chapter-index .t { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 20px; letter-spacing: 0.01em; }
+  .chapter-index .r { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+  /* ---------- chapter divider ---------- */
+  .divider { text-align: center; padding: 92px var(--gutter) 64px; }
+  .divider .kicker { justify-content: center; text-align: center; }
+  .divider .num { font-family: var(--mono); font-size: 13px; letter-spacing: 0.14em; color: var(--red); margin-bottom: 18px; }
+  .divider .display.chtitle { font-size: clamp(40px, 8vw, 76px); line-height: 0.86; margin: 0 0 20px; }
+  .divider .q { font-family: var(--serif); font-style: italic; font-size: 19px; max-width: 40ch; margin: 0 auto 30px; line-height: 1.5; color: var(--ink); }
+  .divider .more { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ---------- word study (woven, not boxed) ---------- */
+  .word-line { font-family: var(--serif); font-style: italic; color: var(--muted); }
+  .heb { font-size: 20px; direction: rtl; unicode-bidi: isolate; font-style: normal; }
+
+  /* ---------- practice / prayer ---------- */
+  .pp { display: grid; grid-template-columns: 1fr; border: 1px solid var(--soft); margin: 40px 0; }
+  @media (min-width: 640px) { .pp { grid-template-columns: 1fr 1fr; } }
+  .pp > div { padding: 22px 26px; }
+  .pp > div + div { border-top: 1px solid var(--soft); }
+  @media (min-width: 640px) { .pp > div + div { border-top: none; border-left: 1px solid var(--soft); } }
+  .pp .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 10px; }
+  .pp p { margin: 0; font-size: 15px; line-height: 1.55; }
+
+  /* ---------- invitation / CTA ---------- */
+  .invite { text-align: center; padding-top: 40px; }
+  .invite .kicker { text-align: center; justify-content: center; margin-bottom: 22px; }
+  .invite p.body { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.55; max-width: 46ch; margin: 0 auto 32px; text-align: center; }
+  .cta-row { display: flex; gap: 22px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+  .cta-row .btn {
+    font-family: var(--body-font); font-weight: 600; font-size: 14px;
+    background: var(--ink); color: var(--paper);
+    padding: 12px 26px; text-decoration: none;
+  }
+  .cta-row .link-soon { font-family: var(--body-font); font-size: 14px; color: var(--muted); border-bottom: 1px dashed var(--soft); padding-bottom: 2px; }
+  .fine { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: center; }
+
+  /* ---------- kingdom ending ---------- */
+  .kingdom { text-align: center; padding: 76px var(--gutter); }
+  .kingdom .l1 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 3.4vw, 30px); color: var(--ink); margin: 0; }
+  .kingdom .l2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 3.4vw, 30px); color: var(--red); margin: 6px 0 0; }
+
+  footer.site {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    padding: 22px var(--gutter);
+    font-family: var(--body-font); font-size: 13px; color: var(--muted);
+  }
+  footer.site .links { display: flex; gap: 18px; }
+  footer.site .links a { color: inherit; text-decoration: none; }
+
+  .status-note {
+    font-family: var(--body-font); font-size: 13px; color: var(--muted);
+    text-align: center; max-width: 42ch; margin: 0 auto; line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <a class="wordmark" href="/">The Right Side Up</a>
+  <nav aria-label="Main navigation"><a href="/library.html">Library</a><a href="/culture.html">Culture</a><a href="/art.html">Art</a></nav>
+</header>
+
+<nav class="subnav" id="subnav">
+  <a href="#ch1" data-target="ch1">Reverence</a>
+  <a href="#ch2" data-target="ch2">Humility</a>
+  <a href="#ch3" data-target="ch3">Listening</a>
+  <a href="#ask" data-target="ask">Ask</a>
+</nav>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="hero-art">
+    <span class="cap">Wisdom starts with wonder &middot; Proverbs 1 &middot; 1 Kings 3</span>
+  </div>
+  <div class="hero-text">
+    <span class="kicker muted">A Right Side Up Studio Publication &middot; Proverbs 1, 3 &middot; 1 Kings 3</span>
+    <h1 class="display title">Humble<br>Beginnings</h1>
+    <p class="dek">The first wisdom you'll ever need — before it's wisdom about anything in particular.</p>
+    <a class="begin" href="#invitation">Begin Reading &darr;</a>
+  </div>
+</section>
+
+<!-- ============================= INVITATION / INTRO ============================= -->
+<section class="section" id="invitation">
+  <div class="col">
+    <span class="kicker">An Invitation</span>
+    <h2 class="essay-title">If you were offered anything, what would you ask for?</h2>
+    <p class="body lede">Not hypothetically. Imagine the offer was real — no budget, no catch, just: name it. Most of us have run that daydream. It's a fun game to play, right up until someone actually asks you to answer for real.</p>
+    <p class="body">That's the exact position Solomon is in at the start of 1 Kings 3. Young. Unproven. Following a father whose reputation could crush anyone standing next to him. And in the middle of the night, God shows up and says it plainly: ask for whatever you want.</p>
+    <p class="body">Whatever Solomon says next is going to tell everyone — and him — exactly who he is.</p>
+    <blockquote class="pull"><p>Real wisdom doesn't start with what you know. It starts with the reverence to admit what you don't, and the trust to ask the one who does.</p></blockquote>
+    <p class="body">The Bible has a word for this kind of wisdom: <em>hokmah</em> — skillful living, the difference between knowing a fact and knowing how to actually move through your life. Proverbs hands you the theory. The stories around it hand you the practice — real people, some getting it right and some not, sometimes the same person at different points in their own story.</p>
+    <p class="body">And every week, this series will keep landing in the same place: wisdom isn't only a set of skills to master. It's a person to know. Jesus doesn't just teach the wisdom of God from a distance — he <em>is</em> the wisdom of God, embodied (1 Corinthians 1:24; Colossians 2:3). Solomon asked for wisdom. We get to know the one Solomon was only ever asking for.</p>
+    <p class="body">This is where the whole <em>Wisdom IRL</em> series has to start, then — not with a skill, but with the posture underneath every skill that follows.</p>
+
+    <div class="chapter-index">
+      <a href="#ch1"><span class="n">01</span><span class="t">Reverence</span><span class="r">Proverbs 1:7</span></a>
+      <a href="#ch2"><span class="n">02</span><span class="t">Humility</span><span class="r">Proverbs 3:5 &middot; 1 Kings 3:7</span></a>
+      <a href="#ch3"><span class="n">03</span><span class="t">A Listening Heart</span><span class="r">Proverbs 3:6 &middot; 1 Kings 3:9</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CHAPTER 1 ============================= -->
+<section class="divider" id="ch1">
+  <span class="num">01</span>
+  <h2 class="display chtitle">Reverence</h2>
+  <p class="q">What happens when you stand in front of something too big to manage?</p>
+  <a class="more" href="#ch1-body">Read More &darr;</a>
+</section>
+
+<section class="section" id="ch1-body">
+  <div class="col">
+    <span class="kicker">Wisdom Starts With Wonder</span>
+    <span class="scripture-ref">Proverbs 1:7</span>
+    <p class="body">Picture a call from someone who could give you anything. No budget. No catch. Just: <em>name it</em>. That's the position Solomon is in, at the very start of his reign.</p>
+    <p class="body">In the middle of the night, God asks him plainly: <em>&ldquo;Ask for whatever you want me to give you&rdquo;</em> (1 Kings 3:5). Whatever Solomon says next will tell everyone — and him — exactly who he is.</p>
+    <p class="body">The Hebrew word behind &ldquo;fear&rdquo; here is <span class="heb">יִרְאָה</span> <span class="word-line">— yirah</span>. It isn't the word for being afraid of something that might hurt you. It's the word for what happens when you stand at the edge of something too vast to take in — a posture, not a terror.</p>
+    <p class="body"><strong>Proverbs puts this word first on purpose.</strong> It calls it the foundation — everything the book later says about money, speech, work, and anger gets built on top of this one brick. Skip it, and the rest doesn't hold.</p>
+    <p class="body">Notice where Solomon is standing when the offer comes — not on a throne yet, not with a temple built, not with a résumé. A young king at a worship site, sacrifices still in the air. Reverence was already in motion before the offer was ever made.</p>
+    <p class="body">There's a place on the Oregon coast — Olivia Beach, in Lincoln City — where a long wooden walkway drops you down onto the sand. Every time I've stood there, I'm floored. Watch the people below from that walkway and they shrink to nothing against the size of the ocean, the wind, the roar of it. It's the kind of place that brings Psalm 8 to mind before you've even finished forming the thought: <em>&ldquo;When I consider your heavens, the work of your fingers, the moon and the stars, which you have set in place, what is mankind that you are mindful of them, human beings that you care for them?&rdquo;</em> (Psalm 8:3&ndash;4). Something happens when you actually let the size of it register. It levels you.</p>
+    <blockquote class="pull"><p>Wisdom doesn't start with information. It starts with wonder.</p></blockquote>
+    <p class="body">And wonder says the thing our pride never wants to say first: <em>I am not God.</em></p>
+
+    <div class="pp">
+      <div>
+        <span class="lbl">Practice</span>
+        <p>Where's your Olivia Beach — the place the size of things finally gets through to you? What does standing there actually do to you?</p>
+      </div>
+      <div>
+        <span class="lbl">Prayer</span>
+        <p>God who cannot be managed — meet me in what I can't take in, and let wonder be the first thing I feel, not the last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CHAPTER 2 ============================= -->
+<section class="divider" id="ch2">
+  <span class="num">02</span>
+  <h2 class="display chtitle">Humility</h2>
+  <p class="q">What do you do when you're the one who's supposed to already know?</p>
+  <a class="more" href="#ch2-body">Read More &darr;</a>
+</section>
+
+<section class="section" id="ch2-body">
+  <div class="col">
+    <span class="kicker">The Courage To Not Know</span>
+    <span class="scripture-ref">Proverbs 3:5 &middot; 1 Kings 3:7</span>
+    <p class="body">Reverence toward God is only half the foundation. The other half is what you believe about yourself.</p>
+    <p class="body">Ancient Near Eastern kings didn't talk like this. King Sulgi of Ur once claimed he'd been endowed with wisdom by the gods in his mother's womb — the wisdom to command men and fight like a warrior. A king was supposed to be the source of wisdom for his people, not a recipient of it. The posture was strength. Never weakness.</p>
+    <p class="body">Solomon breaks that script out loud, on the record, to God's face: <em>&ldquo;I am only a little child and do not know how to carry out my duties&rdquo;</em> (1 Kings 3:7). For a king, in that culture, this is close to unthinkable. The one moment he's supposed to project competence, he confesses the opposite.</p>
+    <p class="body">Solomon wasn't an idiot — David's son, raised in the palace, surrounded by some of the best minds in the kingdom. He isn't saying he's incapable. He's saying something far more significant: <em>even with everything I've been given, I'm not enough for this.</em> That's humility. Not thinking less of yourself — thinking rightly about yourself. Knowing what you bring to the table, and knowing exactly where what you bring to the table runs out.</p>
+    <p class="body">Proverbs 3:5 asks exactly this of us: <strong>&ldquo;Trust in the Lord with all your heart; do not depend on your own understanding.&rdquo;</strong> It doesn't say you don't <em>have</em> understanding. It says don't lean your weight on it — it won't stand. Most of the damage in our lives doesn't come from a lack of information. It comes from trusting our own read on a situation past the point that read can be trusted.</p>
+    <blockquote class="pull"><p>Wisdom has the courage to say, &ldquo;I don't know.&rdquo;</p></blockquote>
+
+    <div class="pp">
+      <div>
+        <span class="lbl">Practice</span>
+        <p>Name a decision where you were completely confident in your own read on things — and your confidence turned out to be the problem, not the missing piece.</p>
+      </div>
+      <div>
+        <span class="lbl">Prayer</span>
+        <p>Lord, I'm in over my skis more often than I let on. Take the competence I'm protecting and give me something truer to stand on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CHAPTER 3 ============================= -->
+<section class="divider" id="ch3">
+  <span class="num">03</span>
+  <h2 class="display chtitle">A Listening Heart</h2>
+  <p class="q">What do you ask for once the myth of self-sufficiency is gone?</p>
+  <a class="more" href="#ch3-body">Read More &darr;</a>
+</section>
+
+<section class="section" id="ch3-body">
+  <div class="col">
+    <span class="kicker">Lev Shomea</span>
+    <span class="scripture-ref">Proverbs 3:6 &middot; 1 Kings 3:9&ndash;13</span>
+    <p class="body">So give your servant a discerning heart to govern your people and to distinguish between right and wrong (1 Kings 3:9). The Hebrew behind &ldquo;discerning heart&rdquo; is literally <span class="heb">לֵב שֹׁמֵעַ</span> <span class="word-line">— lev shomea</span>, &ldquo;a hearing heart.&rdquo;</p>
+    <p class="body">Not a mind that calculates faster. Not a memory that holds more. A heart built to keep hearing from someone else, on purpose, for the rest of its life.</p>
+    <p class="body">That's the request that pleased God — not because it was clever, but because it was the one request that admitted it would need to be answered again. Solomon didn't ask to graduate from needing God. He asked for an organ built to keep listening.</p>
+    <p class="body">&ldquo;Seek his will in all you do, and he will show you which path to take&rdquo; (Proverbs 3:6). And God's response is worth sitting in: because Solomon didn't ask for a long life, wealth, or the defeat of his enemies, he's given wisdom — and all of that besides, unasked.</p>
+    <p class="body"><strong>Humility doesn't just avoid a trap. It opens a hand wide enough to receive more than the hand that was grabbing ever could.</strong></p>
+    <blockquote class="pull"><p>The request that pleases God is the one that admits you'll need to keep asking.</p></blockquote>
+    <p class="body">Wisdom was never a finish line Solomon could cross and be done. It was a life of continual dependence, asked for on purpose. Wisdom is a lifetime of listening.</p>
+
+    <div class="pp">
+      <div>
+        <span class="lbl">Practice</span>
+        <p>Where in your life right now would it cost you the most to say, out loud, &ldquo;I don't actually know what I'm doing&rdquo;? That's usually where a listening habit needs to start.</p>
+      </div>
+      <div>
+        <span class="lbl">Prayer</span>
+        <p>Give me a heart that listens, not a mind that's finished learning. I'd rather keep asking than stop needing you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= EPILOGUE ============================= -->
+<section class="section" id="epilogue">
+  <div class="col">
+    <span class="kicker muted">Issue One</span>
+    <h2 class="essay-title" style="font-style:italic; font-weight:400;">Ask Before You Assume</h2>
+    <p class="body">Solomon asked for wisdom, and God gave him more than he asked. Not because the request was clever — because it was honest. He named exactly what he didn't have, and God met him there.</p>
+    <p class="body">That's the pattern this whole series will keep returning to. Not confidence. Not competence. Wonder first — then a hand open enough to receive what you can't earn.</p>
+    <p class="body">So where are you actually trying to figure it out on your own right now? A marriage. A kid. A friendship. Money. A decision you've already half-made. You might already think you know what needs to happen. You might have no idea at all. Either way, it's the same question: are you leaning on what you know, or listening to God?</p>
+    <p class="body">Admitting you don't know can feel like weakness, so most of us perform a confidence we don't actually have. But there's real freedom on the other side of that performance — <em>God, I don't know what to do here, and I don't have to pretend that I do.</em> Humility was never the absence of confidence. It's confidence aimed at the right place.</p>
+    <blockquote class="pull"><p>Not: I know what I'm doing. But: I know who I'm listening to.</p></blockquote>
+    <p class="body">This week, before the decision, before the text, before you say the thing you'll regret — ask before you assume. Ask like it matters, because it does. The wise never graduate from needing God.</p>
+    <p class="body">That's the tragedy hiding inside Solomon's own story. The young king who asked for a heart that listens becomes famous for wisdom — and somewhere along the way, the man with the listening heart stops listening. The king who said &ldquo;I don't know&rdquo; starts living like he knows best, and the story falls apart. The wisest man who ever lived wasn't wise enough to save himself.</p>
+    <p class="body">Neither are we. We need more than good advice, more than Proverbs, more than trying harder — we need someone greater than Solomon. &ldquo;Something greater than Solomon is here,&rdquo; Jesus said of himself (Matthew 12:42). Solomon stopped listening. Jesus never did. Solomon went his own way, all the way to ruin. Jesus trusted the Father, all the way to a cross.</p>
+    <p class="body" style="font-style:italic;">Wherever you're standing in front of something too big to manage this week — may wonder be your first response, not your last resort. And may you keep asking, because the one you're asking never stops listening either.</p>
+  </div>
+</section>
+
+<!-- ============================= INVITATION / CTA ============================= -->
+<section class="section invite" id="ask">
+  <span class="kicker">Ask Before You Assume</span>
+  <p class="body">This is Issue One of <em>Wisdom IRL</em> — eight field guides through Proverbs, for the wisdom underneath every skill that follows. Issue One preaches September 27.</p>
+  <div class="cta-row">
+    <a class="btn" href="#invitation">Read Online</a>
+    <a class="btn" href="/assets/wisdom-in-real-life/humble-beginnings.pdf" download>Download PDF</a>
+    <span class="link-soon">Listen to the Sermon</span>
+  </div>
+  <p class="status-note">The printable field guide is ready. Sermon audio will be added after Issue One preaches on September 27.</p>
+  <p class="fine" style="margin-top:26px;">Free to read online &middot; made to print and pass along</p>
+</section>
+
+<!-- ============================= KINGDOM ENDING ============================= -->
+<div class="kingdom">
+  <p class="l1">The Kingdom does not turn the world upside down.</p>
+  <p class="l2">It turns an upside-down world right side up.</p>
+</div>
+
+<footer class="site">
+  <span>The Right Side Up</span>
+  <span>Jesus turns an already upside-down world right side up.</span>
+  <span class="links"><a href="/library.html">Library</a><a href="/culture.html">Culture</a><a href="/art.html">Art</a><a href="/#about">About</a><a href="mailto:hello@therightsideup.org">Correspond</a></span>
+</footer>
+
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('#subnav a'));
+    var targets = links.map(function (a) { return document.getElementById(a.dataset.target); }).filter(Boolean);
+    if (!('IntersectionObserver' in window) || !targets.length) return;
+    var byId = {};
+    links.forEach(function (a) { byId[a.dataset.target] = a; });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          var link = byId[entry.target.id];
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    targets.forEach(function (t) { observer.observe(t); });
+  })();
+</script>
+
+
+</body></html>

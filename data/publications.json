@@ -39,6 +39,18 @@
   ],
   "publications": [
     {
+      "shelf": "wisdom-in-real-life",
+      "seriesNumber": 1,
+      "title": "Humble\nBeginnings",
+      "blurb": "The first wisdom we need: reverence, humility, and a listening heart.",
+      "scripture": "Proverbs 1, 3 · 1 Kings 3",
+      "coverLabel": "Wisdom in Real Life · 01",
+      "status": "live",
+      "href": "/publications/humble-beginnings.html",
+      "cover": "/assets/photography/humble-beginnings-machu-picchu.jpg",
+      "coverAlt": "Machu Picchu rises into mist beneath a vast mountain, inviting wonder."
+    },
+    {
       "shelf": "living-hope",
       "seriesNumber": null,
       "title": "Living\nHope",

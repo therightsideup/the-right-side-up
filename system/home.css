@@ -54,7 +54,7 @@ img{display:block;width:100%}
 .lead-copy>p:not(.eyebrow,.scripture){max-width:34rem;margin:16px 0 0;font:400 15px/1.62 var(--serif)}
 .scripture{margin:14px 0 0;color:var(--muted);font:600 9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:24px}
-.button{padding:13px 16px;color:var(--paper);background:var(--ink)}
+.button{padding:13px 16px;color:var(--paper);background:var(--ink);text-decoration:none}
 .issue-notes{padding-top:26px;border-top:1px solid var(--soft);container-type:inline-size}
 .issue-notes h3{max-width:11ch;margin:0 0 20px;font:700 clamp(30px,25cqi,48px)/.88 var(--display);text-transform:uppercase}
 .issue-notes ol{margin:0;padding:0;border-top:1px solid var(--soft);list-style:none}
