@@ -2,11 +2,10 @@
 .series-directory .section-heading,.series-heading{display:grid;gap:24px;margin-bottom:clamp(34px,5vw,64px)}
 .series-directory .section-heading>p,.series-heading>p{max-width:34rem;margin:0;font:400 clamp(15px,1.8vw,19px)/1.62 var(--serif)}
 .series-directory .section-heading h2,.series-heading h2{max-width:9ch;margin:0;font:800 clamp(66px,16vw,134px)/.76 var(--display);letter-spacing:-.02em;text-transform:uppercase}
-.series-grid{display:grid;gap:clamp(34px,5vw,70px)}
-.series-grid a{position:relative;display:grid;gap:20px;min-width:0;padding-bottom:28px;border-bottom:1px solid var(--line);text-decoration:none}
-.series-grid figure{position:relative;margin:0;overflow:hidden;background:#222;aspect-ratio:16/10}
-.series-grid figure::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 36%,rgba(0,0,0,.28));mix-blend-mode:multiply}
-.series-grid img{height:100%;object-fit:cover;filter:grayscale(1) contrast(1.12) brightness(.86);transition:transform .35s ease}
+.series-grid{display:grid;border-top:1px solid var(--line)}
+.series-grid a{position:relative;display:grid;gap:clamp(24px,4vw,48px);min-width:0;padding:clamp(34px,5vw,68px) 0;border-bottom:1px solid var(--line);text-decoration:none}
+.series-grid figure{position:relative;display:grid;place-items:center;min-height:clamp(300px,48vw,560px);margin:0;overflow:hidden;background:transparent}
+.series-grid img{width:min(86%,620px);height:clamp(220px,32vw,430px);object-fit:cover;filter:grayscale(1) contrast(1.12) brightness(.86);transition:transform .35s ease}
 .series-grid a:hover img,.series-grid a:focus-visible img{transform:scale(1.02)}
 .series-grid a>div{position:relative;padding-right:40px}
 .series-grid a>div::after{content:"↗";position:absolute;right:4px;top:0;font:400 20px/1 var(--mono)}
@@ -21,10 +20,9 @@
 .series-shelf .publication h3{font-size:clamp(44px,9vw,64px)}
 .series-heading h2{max-width:10ch}
 
-.standalone-publication{display:grid;gap:26px;text-decoration:none}
-.standalone-publication figure{position:relative;margin:0;overflow:hidden;background:#222;aspect-ratio:4/3}
-.standalone-publication figure::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 38%,rgba(0,0,0,.25));mix-blend-mode:multiply}
-.standalone-publication img{height:100%;object-fit:cover;filter:grayscale(1) contrast(1.12) brightness(.88);transition:transform .35s ease}
+.standalone-publication{display:grid;gap:clamp(26px,4vw,54px);padding:clamp(30px,4vw,58px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none}
+.standalone-publication figure{position:relative;display:grid;place-items:center;min-height:clamp(320px,50vw,590px);margin:0;overflow:hidden;background:transparent}
+.standalone-publication img{width:min(82%,560px);height:clamp(240px,34vw,450px);object-fit:cover;filter:grayscale(1) contrast(1.12) brightness(.88);transition:transform .35s ease}
 .standalone-publication:hover img{transform:scale(1.02)}
 .standalone-publication>div{align-self:end;padding-bottom:10px}
 .standalone-publication h3{max-width:8ch;margin:12px 0 18px;font:800 clamp(66px,16vw,122px)/.75 var(--display);text-transform:uppercase}
@@ -32,12 +30,13 @@
 
 @media (min-width:700px){
   .series-directory .section-heading,.series-heading{grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);align-items:end}
-  .series-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,54px)}
-  .series-grid a:first-child{grid-column:1/-1}
-  .series-grid a:first-child{grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);align-items:end}
-  .series-grid a:first-child figure{aspect-ratio:16/9}
+  .series-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .series-grid a:nth-child(2){padding-right:clamp(24px,4vw,54px);border-right:1px solid var(--line)}
+  .series-grid a:nth-child(3){padding-left:clamp(24px,4vw,54px)}
+  .series-grid a:first-child{grid-column:1/-1;grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);align-items:end}
+  .series-grid a:first-child figure{min-height:clamp(410px,42vw,620px)}
   .standalone-publication{grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr)}
-  .standalone-publication figure{aspect-ratio:16/10}
+  .standalone-publication figure{min-height:clamp(430px,42vw,620px)}
 }
 
 @media (min-width:1040px){
