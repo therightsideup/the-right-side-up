@@ -13,5 +13,6 @@ Working stock library imported from Pexels on September 12, 2026. Preserve the o
 | `open-book-pramod-tiwari.jpg` | Pramod Tiwari | `pexels-pramodtiwari-13288524.jpg` | Teach Us to Pray theme photograph |
 | `repair-staircase-daniel-wells.jpg` | Daniel Wells | `pexels-danielwells67-38714965.jpg` | The Work of Repair theme photograph |
 | `humble-beginnings-machu-picchu.jpg` | Source credit to confirm | Supplied with the Humble Beginnings draft | Humble Beginnings publication hero / wonder motif |
+| `humble-beginnings-olivia-beach.jpg` | Alex Lessler | `IMG_0938.HEIC` | Humble Beginnings message photograph / Olivia Beach |
 
 Before publication, retain a link to each original Pexels asset in the CMS or final media manifest.
