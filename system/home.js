@@ -1,38 +1,26 @@
-(function(){
-  if('scrollRestoration' in history) history.scrollRestoration='manual';
+const cover = document.querySelector('.editorial-cover');
+const allowsPointerMotion = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function beginAtTop(){
-    if(!window.location.hash) window.scrollTo(0,0);
-  }
+if (cover && allowsPointerMotion && !prefersReducedMotion) {
+  let frame;
 
-  beginAtTop();
-  window.addEventListener('pageshow',beginAtTop);
-
-  const themeButton=document.querySelector('.theme-toggle');
-  const themeMeta=document.querySelector('meta[name="theme-color"]');
-  const savedTheme=localStorage.getItem('rsu-theme');
-
-  function setTheme(evening){
-    document.body.classList.toggle('evening',evening);
-    themeButton?.setAttribute('aria-pressed',evening?'true':'false');
-    themeButton?.setAttribute('aria-label',evening?'Use light colors':'Use dark colors');
-    if(themeMeta) themeMeta.setAttribute('content',evening?'#102b2a':'#183f3e');
-  }
-
-  setTheme(savedTheme==='evening');
-
-  themeButton?.addEventListener('click',()=>{
-    const evening=!document.body.classList.contains('evening');
-    setTheme(evening);
-    localStorage.setItem('rsu-theme',evening?'evening':'light');
-  });
-
-  if('serviceWorker' in navigator){
-    navigator.serviceWorker.getRegistrations().then(registrations=>{
-      registrations.forEach(registration=>registration.unregister());
-      if('caches' in window){
-        caches.keys().then(keys=>Promise.all(keys.map(key=>caches.delete(key))));
-      }
+  const setPointerPosition = (event) => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const bounds = cover.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - .5) * 2;
+      const y = ((event.clientY - bounds.top) / bounds.height - .5) * 2;
+      cover.style.setProperty('--pointer-x', x.toFixed(3));
+      cover.style.setProperty('--pointer-y', y.toFixed(3));
     });
-  }
-})();
+  };
+
+  const resetPointerPosition = () => {
+    cover.style.setProperty('--pointer-x', '0');
+    cover.style.setProperty('--pointer-y', '0');
+  };
+
+  cover.addEventListener('pointermove', setPointerPosition, { passive: true });
+  cover.addEventListener('pointerleave', resetPointerPosition, { passive: true });
+}

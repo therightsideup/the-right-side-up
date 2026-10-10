@@ -4,23 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f0ede6">
-  <meta name="description" content="The Right Side Up.">
+  <meta name="description" content="An exploration of the world we were made for, the life we were meant to live, and the God who came to turn an already upside-down world right side up.">
   <title>The Right Side Up</title>
   <link rel="icon" href="/icons/rsu-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icons/rsu-apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/system/home.css?v=restart-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&amp;family=Libre+Baskerville&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/system/home.css?v=phase-3">
+  <script type="module" src="/system/home.js?v=phase-3"></script>
 </head>
 <body>
-  <main class="landing" aria-labelledby="site-title">
-    <figure class="landing-photo">
-      <img src="/assets/photography/rsu-building-reflection-alex-lessler.jpg" alt="A glass building rises into the sky, reflecting neighboring towers.">
+  <main class="editorial-cover" aria-labelledby="site-title">
+    <div class="cover-title">
+      <h1 id="site-title" aria-label="The Right Side Up">
+        <span class="title-line title-line--the">The</span>
+        <span class="title-line title-line--right">Right</span>
+        <span class="title-line title-line--side">Side Up</span>
+      </h1>
+    </div>
+
+    <figure class="cover-artwork">
+      <picture>
+        <source type="image/avif" srcset="/assets/homepage/architecture-480.avif 480w, /assets/homepage/architecture-768.avif 768w" sizes="(max-width: 739px) calc(100vw - 40px), (max-width: 1099px) 61vw, 52vw">
+        <source type="image/webp" srcset="/assets/homepage/architecture-480.webp 480w, /assets/homepage/architecture-768.webp 768w" sizes="(max-width: 739px) calc(100vw - 40px), (max-width: 1099px) 61vw, 52vw">
+        <img src="/assets/photography/rsu-building-reflection-alex-lessler.jpg" width="768" height="1024" alt="A glass building rises into the sky, reflecting neighboring towers." fetchpriority="high">
+      </picture>
+      <svg class="artwork-annotation" viewBox="0 0 180 180" aria-hidden="true">
+        <path d="M17 104c21-44 63-70 108-65 27 3 42 15 39 31-5 25-55 46-104 44-25-1-44-8-43-10Z"></path>
+        <path d="m143 117 15 2-7 13"></path>
+      </svg>
     </figure>
 
-    <section class="landing-title">
-      <div class="title-rule" aria-hidden="true"></div>
-      <h1 id="site-title">The<br>Right<br>Side Up</h1>
-    </section>
+    <div class="detail-crop detail-crop--lower" aria-hidden="true"></div>
+    <div class="cover-statement">
+      <span class="statement-rule" aria-hidden="true"></span>
+      <p>An exploration of the world we were made for, the life we were meant to live, and the God who came to turn an already upside-down world right side up.</p>
+    </div>
+
+    <div class="registration-mark registration-mark--top" aria-hidden="true"><span></span><span></span></div>
+    <div class="registration-mark registration-mark--bottom" aria-hidden="true"><span></span><span></span></div>
   </main>
 </body>
 </html>

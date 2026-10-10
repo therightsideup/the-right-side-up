@@ -1,4 +1,4 @@
-# The Right Side Up - Editorial Identity 2.1
+# The Right Side Up - Editorial Identity 2.2
 
 Status: Canonical working guidance for the monochrome editorial site and its publication formats.
 
@@ -18,6 +18,17 @@ We design attention, not pages. Attention becomes contemplation; contemplation b
 4. **Printed architecture** - oversized condensed display type, serif reading text, and monospaced metadata.
 5. **One visual idea** - each publication has one theme photograph, used consistently on its cover and discovery cards.
 6. **Generous utility** - web editions, PDFs, excerpts, and future study formats should feel like editions of the same work.
+
+## Homepage editorial system
+
+The homepage is the cover of the Studio, not a directory, dashboard, or condensed Library. It may be more expressive than a publication reading page while remaining part of the same identity.
+
+- Build one cohesive editorial composition rather than stacking conventional marketing sections.
+- Use an underlying grid, but allow type and imagery to cross it intentionally.
+- The brand name and one approved statement are sufficient. Do not manufacture issue numbers, dates, publishing schedules, or decorative metadata.
+- The homepage may use multiple crops of one image, or a deliberately art-directed photographic collage. This is a controlled exception to the one-theme-image rule for publications.
+- Preserve substantial negative space. Expressiveness comes from scale, cropping, rhythm, and registration, not from filling every available area.
+- Mobile receives its own reading order and composition. It is not a reduced desktop spread.
 
 ## Typography
 
@@ -66,6 +77,7 @@ Prefer Alex's approved work or licensed documentary stock. Images should feel ca
 - Use that same photograph on the publication cover, homepage card, library card, and PDF cover.
 - Do not introduce unrelated chapter photographs inside the same publication.
 - A publication may later earn a deliberately commissioned visual sequence, but that is an exception requiring its own art direction.
+- The homepage may repeat or crop its approved hero image as editorial artwork, but this does not change a publication's one-theme-image rule.
 
 The photograph should establish emotional atmosphere rather than literally illustrate every sentence. It must still make conceptual sense: prayer should not look militaristic; repair should suggest structure, wear, or making whole; relational work should show distance or gathering.
 
@@ -81,6 +93,29 @@ The photograph should establish emotional atmosphere rather than literally illus
 ## Texture
 
 Use one global paper-grain layer at approximately 5-6% opacity. Texture should make the page feel handled, not dirty. Avoid decorative tape, torn-paper edges, large rotations, and layered collage on reading pages. The design should feel tactile because of paper, type, photography, and spacing - not because effects were added everywhere.
+
+On the homepage, restrained halftone, imperfect registration, offset frames, and cropped paper edges may be used when they clarify the composition. Apply them to a small number of focal moments. They must never reduce text legibility or make documentary photography feel falsely aged.
+
+Handwritten marginalia must come from real, approved handwriting or an original drawn mark. Do not use a handwriting font or fabricate personal notes.
+
+## Motion and interaction
+
+Motion should feel like a printed composition settling into register.
+
+- Entrance sequences should be brief, normally under one second per element and complete without an artificial delay.
+- Prefer opacity, clipping, and small transforms. Avoid bouncing, floating, glowing, scroll hijacking, custom cursors, and continuous decorative movement.
+- Pointer-responsive movement is optional and should remain within a few pixels.
+- All important content must be visible without JavaScript.
+- Respect `prefers-reduced-motion` and provide a complete static composition.
+- Use CSS first. Add an animation library only when a genuinely coordinated timeline cannot be expressed clearly and maintainably with CSS and small progressive JavaScript.
+
+## Web image delivery
+
+- Preserve original masters and credits.
+- Export selected web imagery as AVIF and WebP with a JPEG or PNG fallback.
+- Use explicit intrinsic dimensions and responsive `srcset`/`sizes` to prevent layout shift.
+- Do not upscale a source simply to manufacture a larger file.
+- Load only the imagery used by the current page; archived artwork should not enter the homepage payload.
 
 ## Grid and spacing
 
@@ -164,4 +199,3 @@ Begin with Jesus. Think beside the reader rather than lecturing. Prefer invitati
 5. Could a thoughtful teenager read it without being talked down to?
 6. Does mobile feel composed rather than merely stacked?
 7. Does the PDF feel like the same publication, newly typeset for print?
-
