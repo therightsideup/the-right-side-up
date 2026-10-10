@@ -4,6 +4,7 @@ Working stock library imported from Pexels on September 12, 2026. Preserve the o
 
 | Local file | Photographer | Original Pexels filename | Working use |
 |---|---|---|---|
+| `rsu-building-reflection-alex-lessler.jpg` | Alex Lessler | Personal photograph supplied October 9, 2026 | Minimal restart homepage |
 | `wet-crosswalk-shotsbyvo.jpg` | shotsbyvo | `pexels-shotsbyvo-317256838-15384651.jpg` | Wisdom in Real Life homepage hero |
 | `park-paulo-cerqueira.jpg` | Paulo Cerqueira | `pexels-paulo-cerqueira-472736163-15760123.jpg` | Related publication card / ordinary life |
 | `night-traffic-ariel-schmunck.jpg` | Ariel Schmunck | `pexels-ariel-schmunck-292691263-13345880.jpg` | Related publication card / city movement |
